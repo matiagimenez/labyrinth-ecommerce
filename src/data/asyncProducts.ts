@@ -634,3 +634,29 @@ export const products = [
   `,
 	},
 ];
+
+// const DELAY = 200;
+
+// export const getProducts = () => {
+// 	return new Promise((resolve) => {
+// 		setTimeout(() => {
+// 			resolve(products);
+// 		}, DELAY);
+// 	});
+// };
+
+// export const getProductById = (id) => {
+// 	return new Promise((resolve) => {
+// 		setTimeout(() => {
+// 			resolve(products.find((prod) => prod.id === id));
+// 		}, DELAY);
+// 	});
+// };
+
+// export const getProductsByCategory = (category) => {
+// 	return new Promise((resolve) => {
+// 		setTimeout(() => {
+// 			resolve(products.filter((prod) => prod.category === category));
+// 		}, DELAY);
+// 	});
+// };
