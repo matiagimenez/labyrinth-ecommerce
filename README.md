@@ -3,6 +3,7 @@
 ## Build with
 
 -   [React.js](https://react.dev/)
+-   Rutas - [React Router](https://reactrouter.com/en/main)
 -   Estilos - [TailwindCSS 3.3.1](https://tailwindcss.com/docs/installation)
 -   Build tool - [Vite](https://vitejs.dev/)
 
