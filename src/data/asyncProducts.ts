@@ -713,13 +713,7 @@ export const products = [
 		enabled: true,
 		images: ['01.jpg', '02.jpg', '03.jpg', '04.jpg'],
 		banner: 'banner.jpg',
-		description: `
-    Immerse yourself completely in books wherever and whenever you want.
-    The Kindle Paperwhite is thin, light, and easy to carry so you can enjoy your favorite books anytime. Thanks to our 300 ppi glare-free Paperwhite display, now with 10% more brightness at maximum brightness, you can read under any light. Plus, now a single USB-C charge lasts up to 10 weeks.
-    Dive into reading
-    The Kindle Paperwhite is waterproof, so you can use it confidently in even more places, whether you're at the beach or in the bathtub. With IPX8 certification, the Kindle Paperwhite withstands accidental immersion in fresh water up to a depth of 2 meters for up to 60 minutes and in saltwater up to 0.25 meters for up to 3 minutes.
-    More than just a book
-    Now you can adjust the screen tone of your Kindle Paperwhite and choose from a white light to a warm amber light, or schedule when it changes from one tone to another for a personalized reading experience. You can also adjust the font size and thickness to your preference.
+		description: ` Immerse yourself completely in books wherever and whenever you want. The Kindle Paperwhite is thin, light, and easy to carry so you can enjoy your favorite books anytime. Thanks to our 300 ppi glare-free Paperwhite display, now with 10% more brightness at maximum brightness, you can read under any light. Plus, now a single USB-C charge lasts up to 10 weeks. The Kindle Paperwhite is waterproof, so you can use it confidently in even more places, whether you're at the beach or in the bathtub. With IPX8 certification, the Kindle Paperwhite withstands accidental immersion in fresh water up to a depth of 2 meters for up to 60 minutes and in saltwater up to 0.25 meters for up to 3 minutes. Now you can adjust the screen tone of your Kindle Paperwhite and choose from a white light to a warm amber light, or schedule when it changes from one tone to another for a personalized reading experience. You can also adjust the font size and thickness to your preference.
   `,
 	},
 	{
@@ -739,10 +733,8 @@ export const products = [
 			'05-600x600.webp',
 		],
 		banner: 'banner-oculus-quest.webp.jpg',
-		description: `
-		M2 Pro is a head strap with a battery specially designed by BOBOVR for the Oculus Quest 2. The BOBOVR design team optimized many details based on the original M2, enhancing overall comfort and practicality of the head strap. 
-		The redesigned shape at the back of the head provides a larger contact area, improving overall fit and comfort.
-  	`,
+		description: `M2 Pro is a head strap with a battery specially designed by BOBOVR for the Oculus Quest 2. The BOBOVR design team optimized many details based on the original M2, enhancing overall comfort and practicality of the head strap. 
+		The redesigned shape at the back of the head provides a larger contact area, improving overall fit and comfort.`,
 	},
 ];
 
