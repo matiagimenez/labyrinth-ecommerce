@@ -5,6 +5,7 @@
 -   [React.js](https://react.dev/)
 -   Rutas - [React Router](https://reactrouter.com/en/main)
 -   Estilos - [TailwindCSS 3.3.1](https://tailwindcss.com/docs/installation)
+-   Testing - [Jest](https://jestjs.io/)
 -   Build tool - [Vite](https://vitejs.dev/)
 
 ## Backlog
