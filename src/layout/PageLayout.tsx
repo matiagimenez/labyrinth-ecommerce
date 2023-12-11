@@ -11,7 +11,7 @@ export const PageLayout: FunctionComponent<PageLayoutProps> = ({
 	return (
 		<>
 			<Header />
-			<main>{children}</main>
+			<main className='mt-[100px]'>{children}</main>
 			<Footer />
 		</>
 	);
