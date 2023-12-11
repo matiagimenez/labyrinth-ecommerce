@@ -1,10 +1,10 @@
 import { FunctionComponent } from 'react';
-import { Button } from './Button';
+import { HeaderButton } from './HeaderButton';
 
 export const WishList: FunctionComponent = () => {
 	return (
 		<li>
-			<Button src='/images/wishlist-icon.svg' alt='Wishlist icon' />
+			<HeaderButton src='/images/wishlist-icon.svg' alt='Wishlist icon' />
 			{/* <MenuList/> */}
 		</li>
 	);

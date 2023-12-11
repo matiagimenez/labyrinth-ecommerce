@@ -5,7 +5,7 @@ type ButtonProps = {
 	alt: string;
 };
 
-export const Button: FunctionComponent<ButtonProps> = ({ src, alt }) => {
+export const HeaderButton: FunctionComponent<ButtonProps> = ({ src, alt }) => {
 	return (
 		<button>
 			<img src={src} className='w-[25px] sm:w-[32px]' alt={alt} />
