@@ -1,8 +1,10 @@
 import { FunctionComponent } from 'react';
+import { SubscribeForm } from './SubscribeForm';
 
 export const Footer: FunctionComponent = () => {
 	return (
 		<footer>
+			<SubscribeForm />
 			<hr />
 			<p className='w-full text-center pt-[20px] text-sm md:text-base'>
 				Built with 🧉 & <span className='text-rustyred'>❤</span> by
