@@ -19,7 +19,7 @@ Labyrinth e-commerce </h1>
 -   Testing - [Jest](https://jestjs.io/)
 -   Build tool - [Vite](https://vitejs.dev/)
 -   
-#### [Demo:]("")
+#### Demo: [Labyrinth]("")
 
 ## Backlog
 
