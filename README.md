@@ -8,8 +8,7 @@
 </clipPath>
 </defs>
 </svg>
-![labyrinth-logo](https://github.com/matiasgimenezdev/labyrinth-ecommerce/assets/117539520/89006f75-37de-4a0e-8991-e78314f711f4)
- Labyrinth e-commerce </h1>
+Labyrinth e-commerce </h1>
 
 ## Build with
 
