@@ -1,4 +1,4 @@
-![labyrinth-logo](https://github.com/matiasgimenezdev/labyrinth-ecommerce/assets/117539520/89bcbf23-00e0-4920-ab04-98b82fe8a37d)<p align="center">
+<h1 align="center">Labyrinth e-commerce ![labyrinth-logo](https://github.com/matiasgimenezdev/labyrinth-ecommerce/assets/117539520/89bcbf23-00e0-4920-ab04-98b82fe8a37d)<p align="center">
   <a href="#" width="100%" align="center"> 
   <svg width="150" height="150" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_14_34)">
@@ -11,13 +11,9 @@
 </defs>
 </svg>
   </a>
-</p>
-<h1 align="center">Labyrinth e-commerce</h1>
+</p></h1>
 
-
-## Building an e-commerce with React
-
-### Build with
+## Build with
 
 -   [React.js](https://react.dev/)
 -   Rutas - [React Router](https://reactrouter.com/en/main)
@@ -25,7 +21,7 @@
 -   Testing - [Jest](https://jestjs.io/)
 -   Build tool - [Vite](https://vitejs.dev/)
 
-### Backlog
+## Backlog
 
 -   [ ] Homepage
     -   [ ] Users should be able to view some featured products (carousel?).
