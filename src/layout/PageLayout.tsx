@@ -9,10 +9,10 @@ export const PageLayout: FunctionComponent<PageLayoutProps> = ({
 	children,
 }) => {
 	return (
-		<main>
+		<>
 			<Header />
-			{children}
+			<main>{children}</main>
 			<Footer />
-		</main>
+		</>
 	);
 };

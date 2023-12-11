@@ -3,6 +3,7 @@ export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
+			fontFamily: { varela: ['Varela Round', 'sans-serif'] },
 			colors: {
 				crimson: {
 					DEFAULT: '#880d1e',
