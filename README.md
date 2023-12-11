@@ -1,6 +1,11 @@
-# Building an e-commerce with React
+<p align="center">
+  <a href="#"><img src="/images/labyrinth-logo.svg" alt="Logo" height=170></a>
+</p>
+<h1 align="center">Labyrinth e-commerce</h1>
 
-## Build with
+## Building an e-commerce with React
+
+### Build with
 
 -   [React.js](https://react.dev/)
 -   Rutas - [React Router](https://reactrouter.com/en/main)
@@ -8,7 +13,7 @@
 -   Testing - [Jest](https://jestjs.io/)
 -   Build tool - [Vite](https://vitejs.dev/)
 
-## Backlog
+### Backlog
 
 -   [ ] Homepage
     -   [ ] Users should be able to view some featured products (carousel?).
