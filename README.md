@@ -18,7 +18,7 @@ Labyrinth e-commerce </h1>
 -   Estilos - [TailwindCSS 3.3.1](https://tailwindcss.com/docs/installation)
 -   Testing - [Jest](https://jestjs.io/)
 -   Build tool - [Vite](https://vitejs.dev/)
--   
+  
 #### Demo: [Labyrinth]("")
 
 ## Backlog
