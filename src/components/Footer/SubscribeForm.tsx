@@ -25,7 +25,7 @@ export const SubscribeForm: FunctionComponent = () => {
 				/>
 				<button
 					type='submit'
-					className='ml-1 p-2 bg-rustyred border-2 border-rustyred text-white rounded hover:opacity-[.8] transition-opacity'
+					className='ml-1 p-2 bg-rustyred border-2 border-rustyred text-white rounded hover:opacity-[.85] transition-opacity'
 					onClick={(event) => {
 						event.preventDefault();
 						setEmail('');
