@@ -13,7 +13,7 @@ export const HeaderButton: FunctionComponent<ButtonProps> = ({
 
 	return (
 		<button
-			className='mt-1 text-2xl text-rustyred'
+			className='text-2xl md:text-3xl text-rustyred'
 			onClick={() => {
 				setIsActive(!isActive);
 			}}
