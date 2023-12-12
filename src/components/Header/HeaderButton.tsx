@@ -1,14 +1,24 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, ReactElement, useState } from 'react';
 
 type ButtonProps = {
-	src: string;
-	alt: string;
+	active: ReactElement;
+	inactive: ReactElement;
 };
 
-export const HeaderButton: FunctionComponent<ButtonProps> = ({ src, alt }) => {
+export const HeaderButton: FunctionComponent<ButtonProps> = ({
+	active,
+	inactive,
+}) => {
+	const [isActive, setIsActive] = useState<boolean>(false);
+
 	return (
-		<button>
-			<img src={src} className='w-[25px] sm:w-[32px]' alt={alt} />
+		<button
+			className='mt-1 text-2xl text-rustyred'
+			onClick={() => {
+				setIsActive(!isActive);
+			}}
+		>
+			{isActive ? active : inactive}
 		</button>
 	);
 };

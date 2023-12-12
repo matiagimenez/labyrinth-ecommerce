@@ -1,12 +1,13 @@
 import { FunctionComponent } from 'react';
 import { HeaderButton } from './HeaderButton';
+import { RiShoppingCart2Line, RiShoppingCart2Fill } from 'react-icons/ri';
 
 export const ShoppingCart: FunctionComponent = () => {
 	return (
 		<li className='ml-3 md:ml-5'>
 			<HeaderButton
-				src='/images/shopping-cart.svg'
-				alt='Shopping cart icon'
+				active={<RiShoppingCart2Fill />}
+				inactive={<RiShoppingCart2Line />}
 			/>
 			{/* <MenuList/> */}
 		</li>
