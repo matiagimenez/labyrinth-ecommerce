@@ -53,7 +53,7 @@ export const SubscribeForm: FunctionComponent = () => {
 				/>
 				<input
 					type='submit'
-					className='ml-1 p-2 bg-rustyred border-2 border-rustyred text-white rounded hover:opacity-[.85] transition-opacity'
+					className='ml-1 cursor-pointer p-2 bg-rustyred border-2 border-rustyred text-white rounded hover:opacity-[.85] transition-opacity'
 					value='Subscribe'
 				/>
 			</form>
