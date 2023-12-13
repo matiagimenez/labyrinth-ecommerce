@@ -14,7 +14,7 @@ export const HomePage: FunctionComponent = () => {
 					</span>
 					<a
 						href='#Products'
-						className='inline-block margin-auto text-base bg-rustyred mt-4 w-[200px] rounded-lg text-center p-2 text-white border-2 border-rustyred hover:bg-transparent hover:text-rustyred transition-colors'
+						className='inline-block margin-auto text-base bg-rustyred mt-4 w-[200px] rounded-lg text-center p-2 text-white border-2 border-rustyred hover:bg-transparent hover:text-rustyred transition-colors duration-300'
 					>
 						Shop now <FaArrowRightLong className='inline' />
 					</a>
