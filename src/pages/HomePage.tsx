@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'react';
 import { FaArrowRightLong } from 'react-icons/fa6';
-import { Catalog } from '../components/Catalog';
+import { Catalog, Carousel } from '../components';
+import { Image } from '../types';
 
 export const HomePage: FunctionComponent = () => {
 	return (
@@ -28,7 +29,41 @@ export const HomePage: FunctionComponent = () => {
 					className='order-1 select-none w-[350px] h-[350px] inline-block transition-transform duration-500 hover:-rotate-3 sm:order-1 md:mt-2 md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] xl:w-[550px] xl:h-[550px]'
 				/>
 			</section>
+			<Carousel images={images} />
 			<Catalog />
 		</>
 	);
 };
+
+const images: Image[] = [
+	{
+		id: 1,
+		src: '/product-images/alienware-m15-r7-240hz-core-i7-12700h-16gb-512gb-rtx-3070ti-01-600x600.jpg',
+		alt: 'Alienware M15 R7',
+		href: '',
+	},
+	{
+		id: 2,
+		src: '/product-images/apple-macbook-pro-M2-pro-12-core-16gb-512gb-space-gray-01-600x600.webp',
+		alt: 'Apple Macbook Pro M2',
+		href: '',
+	},
+	{
+		id: 3,
+		src: '/product-images/asus-vivobook-pro-14-oled-core-i5-11300h-8gb-256gb-01-600x600.jpg',
+		alt: 'Asus Vivobook Pro 14',
+		href: '',
+	},
+	{
+		id: 4,
+		src: '/product-images/lenovo-ideapad-3-14-ryzen-5-8gb-256-gb-ssd-01.jpg',
+		alt: 'Lenovo Ideapad 3',
+		href: '',
+	},
+	{
+		id: 5,
+		src: '/product-images/lenovo-ideapad-gaming-3-120hz-ryzen-5-8gb-256gb-rtx-3050ti-01-600x600.jpg',
+		alt: 'Lenovo Ideapad 3 Gaming',
+		href: '',
+	},
+];

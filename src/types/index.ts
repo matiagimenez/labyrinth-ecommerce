@@ -1,2 +1,3 @@
 import { Product } from './Product';
-export type { Product };
+import { Image } from './Image';
+export type { Product, Image };
