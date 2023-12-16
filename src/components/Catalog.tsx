@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 
 export const Catalog: FunctionComponent = () => {
 	return (
-		<section id='Products'>
+		<section className='mt-8'>
 			<h2 className='opacity-0'>Products</h2>
 			<form action=''></form>
 			<section className='flex flex-row'>

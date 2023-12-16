@@ -29,6 +29,7 @@ export const HomePage: FunctionComponent = () => {
 					className='order-1 mb-8 select-none h-[300px] md:mb-0 inline-block md:mt-2 lg:h-[500px] xl:h-[600px]'
 				/>
 			</section>
+			<span className='opacity-0 block pt-20 md:pt-0' id='Products' />
 			<Carousel images={images} />
 			<Catalog />
 		</>
