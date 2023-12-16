@@ -6,7 +6,7 @@ export const Footer: FunctionComponent = () => {
 		<footer>
 			<SubscribeForm />
 			<hr />
-			<p className='w-full text-center pt-[20px] text-sm md:text-base'>
+			<p className='w-full text-center py-[20px] text-sm md:text-base'>
 				Built with 🧉 & <span className='text-rustyred'>❤</span> by
 				<a
 					className='ml-1 text-rustyred font-semibold cursor-pointer hover:underline'
