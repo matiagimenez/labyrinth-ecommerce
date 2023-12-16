@@ -26,7 +26,7 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
 	}
 
 	const buttonStyles = `
-		bg-rustyred rounded-lg text-white text-xs p-2 ml-1
+		bg-rustyred rounded-3xl text-white text-xs p-3 ml-1
 	`;
 
 	return (
@@ -37,7 +37,7 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
 					latest products
 				</span>
 			</h2>
-			<nav className='absolute right-6 top-24 pt-2 md:top-24 md:right-16'>
+			<nav className='absolute right-10 top-20 pt-2 md:top-24 md:right-16'>
 				<button
 					onClick={handleBackClick}
 					className={`${

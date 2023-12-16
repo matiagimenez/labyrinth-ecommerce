@@ -13,7 +13,7 @@ export const Header = () => {
 					LABYRINTH
 				</a>
 			</h1>
-			<nav className='inline-block w-[40%] absolute top-9 right-5 sm:right-10 md:right-32'>
+			<nav className='inline-block w-[40%] absolute top-9 right-12 sm:right-10 md:right-32'>
 				<ul className='flex cont-right h-full items-bottom justify-end'>
 					<WishList />
 					<ShoppingCart />
