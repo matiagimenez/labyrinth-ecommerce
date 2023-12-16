@@ -1,6 +1,6 @@
 import { FunctionComponent, useState } from 'react';
 import { Image } from '../../types';
-import { CarouselItem, CarouselControls } from '..';
+import { CarouselItem, CarouselControls } from '.';
 
 type CarouselProps = {
 	images: Image[];

@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import { SubscribeForm } from './SubscribeForm';
+import { SubscribeForm } from '.';
 
 export const Footer: FunctionComponent = () => {
 	return (
