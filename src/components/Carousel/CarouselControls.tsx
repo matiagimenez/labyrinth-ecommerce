@@ -44,7 +44,7 @@ export const CarouselControls: FunctionComponent<CarouselControlsProps> = ({
 						onClick={() => {
 							setCurrent(index);
 						}}
-						className={`cursor-pointer inline-block mb-0.5 w-[50px] h-[6px] ml-0.5 rounded-lg ${
+						className={`transition-all duration-200 cursor-pointer inline-block mb-0.5 w-[50px] h-[6px] ml-0.5 rounded-lg ${
 							index === current
 								? 'bg-rustyred'
 								: 'border border-pink bg-transparent'
@@ -56,7 +56,7 @@ export const CarouselControls: FunctionComponent<CarouselControlsProps> = ({
 				onClick={handleForwardClick}
 				className={`${
 					current === amountOfImages && 'opacity-0 cursor-default'
-				} ${buttonStyles}`}
+				} ${buttonStyles} transition-opacity duration-300`}
 			>
 				<IoIosArrowForward />
 			</button>
