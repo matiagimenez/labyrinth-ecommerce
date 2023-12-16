@@ -23,7 +23,7 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 	if (id === current) {
 		return (
 			<li
-				className={`${styles} shadow-md hover:shadow-xl transition-all duration-500 block relative`}
+				className={`${styles} shadow-md hover:shadow-lg transition-opacity duration-300 block relative`}
 			>
 				<img src={src} alt={alt} className='w-[220px] lg:w-[300px]' />
 				<p className='py-2 pb-4 font-medium text-center'>{alt}</p>
