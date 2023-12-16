@@ -22,12 +22,12 @@ export const SubscribeForm: FunctionComponent = () => {
 	}
 
 	return (
-		<section className='text-center mt-2'>
+		<section className='text-center mt-2 pb-4'>
 			<p className='font-semibold text-md w-[90%] m-auto md:text-xl'>
 				Subscribe to out newsletter to get updates on our latest offers
 			</p>
-			<p className='font-extralight text-sm mt-1 w-[80%] m-auto md:text-base'>
-				Get 10% off on your first order just by subscribir to our
+			<p className='font-light mt-1 w-[80%] m-auto'>
+				Get 10% off on your first order just by subscribing to our
 				newsletter
 			</p>
 			<form
@@ -36,16 +36,16 @@ export const SubscribeForm: FunctionComponent = () => {
 			>
 				<label
 					htmlFor={emailId}
-					className='mr-2 absolute -top-6 text-sm font-extralight'
+					className='mr-2 absolute -top-6 font-light'
 				>
-					Your e-mail address:
+					Your e-mail address
 				</label>
 				<input
 					type='email'
 					id={emailId}
 					name='email'
 					autoComplete='off'
-					className='p-2 border-2 rounded w-[60%] md:w-[500px] outline-rustyred border-cyan'
+					className='p-2 mt-1 border-2 rounded w-[60%] md:w-[500px] outline-rustyred border-cyan'
 					value={email}
 					onChange={(event: ChangeEvent<HTMLInputElement>) => {
 						setEmail(event.currentTarget.value);
@@ -57,7 +57,7 @@ export const SubscribeForm: FunctionComponent = () => {
 					value='Subscribe'
 				/>
 			</form>
-			<p className='font-extralight text-md pb-5 md:text-base'>
+			<p className='font-light pb-5 md:text-base'>
 				You will be able to unsubscribe at any time
 			</p>
 		</section>
