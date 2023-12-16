@@ -17,7 +17,7 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 	const { src, alt, href, id } = image;
 
 	const styles: string = `
-		rounded-xl pt-6 pt-2 border
+		rounded-xl pt-6 border
 	`;
 
 	if (id === current) {
@@ -30,8 +30,8 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 					alt={alt}
 					className='w-[300px] xl:w-[270px] 2xl:w-[300px] px-4'
 				/>
-				<section className='bg-cyan-700 pb-6 border border-cyan-500  rounded-b-xl'>
-					<p className='border-t w-auto p-2 pt-4 text-lg pb-4 font-medium text-center'>
+				<section className='bg-cyan-700 pb-6 border border-cyan-500  rounded-b-xl px-4'>
+					<p className='border-t w-auto p- pt-4 text-lg pb-4 font-medium text-center'>
 						{alt}
 					</p>
 					<a
@@ -58,7 +58,7 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 				alt={alt}
 				className='w-[120px] lg:w-[150px] ml-auto mr-auto block  px-4'
 			/>
-			<section className='bg-cyan-800 pb-6'>
+			<section className='bg-cyan-800 pb-6 px-4'>
 				<p className='py-2 opacity-30 p-2 pb-4 font-medium text-center'>
 					{alt}
 				</p>
