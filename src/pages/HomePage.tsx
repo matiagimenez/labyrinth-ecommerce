@@ -6,7 +6,7 @@ import { Image } from '../types';
 export const HomePage: FunctionComponent = () => {
 	return (
 		<>
-			<section className='min-h-[90vh] md:min-h-fit justify-center relative flex flex-col items-center md:pt-8 md:flex-row md:items-start'>
+			<section className='min-h-[90vh] justify-start relative flex flex-col items-center pt-6 md:min-h-fit md:justify-center md:pt-8 md:flex-row md:items-start'>
 				<p className=' inline-block text-center text-5xl order-2 w-[100%] md:w-[40%] md:order-1 md:text-left xl:text-7xl md:p-8 md:pr-0 md:pt-24 lg:p-24 lg:pr-0 lg:pt-36 lg:pl-8 lg:w-[32%]'>
 					All products{' '}
 					<span className='block font-bold text-rustyred mt-2'>
@@ -29,7 +29,7 @@ export const HomePage: FunctionComponent = () => {
 					className='order-1 mb-8 select-none h-[300px] md:mb-0 inline-block md:mt-2 lg:h-[500px] xl:h-[600px]'
 				/>
 			</section>
-			<span className='opacity-0 block pt-18 md:pt-0' id='Products' />
+			<span className='opacity-0 block pt-20 md:pt-0' id='Products' />
 			<Carousel images={images} />
 			<Catalog />
 		</>
