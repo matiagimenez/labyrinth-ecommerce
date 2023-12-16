@@ -31,16 +31,16 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 					className='w-[300px] xl:w-[270px] 2xl:w-[300px] px-4'
 				/>
 				<section className='bg-cyan-700 pb-6 border border-cyan-500  rounded-b-xl px-4'>
-					<p className='border-t w-auto p- pt-4 text-lg pb-4 font-medium text-center'>
+					<p className='border-t w-auto pl-2 pt-4 text-lg pb-4 font-medium'>
 						{alt}
 					</p>
 					<a
 						href={href}
-						className='bg-rustyred text-white py-2 w-[120px] rounded ml-auto mr-auto text-xs text-center block hover:opacity-90'
+						className='bg-rustyred text-white py-2 ml-2 w-[120px] rounded text-xs text-center block hover:opacity-90'
 					>
 						View details
 					</a>
-					<button className='absolute bottom-8 right-10 text-rustyred text-2xl'>
+					<button className='hidden xl:inline absolute bottom-8 right-8 text-rustyred text-2xl'>
 						<VscHeart />
 					</button>
 				</section>
