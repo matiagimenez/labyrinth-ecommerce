@@ -73,7 +73,7 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
 						<span
 							key={index}
 							onClick={() => {
-								setCurrent(index);
+								handleItemClick(index);
 							}}
 							className={`cursor-pointer inline-block w-[50px] h-[6px] ml-0.5 rounded-lg ${
 								index === current
