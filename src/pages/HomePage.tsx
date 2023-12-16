@@ -6,21 +6,26 @@ import { Image } from '../types';
 export const HomePage: FunctionComponent = () => {
 	return (
 		<>
-			<section className='min-h-[90vh] justify-center relative flex flex-col items-center pt-6 md:min-h-fit md:justify-start md:pt-8 md:flex-row md:items-start'>
-				<p className=' inline-block text-center text-5xl order-2 w-[100%] md:w-[40%] md:order-1 md:text-left xl:text-7xl md:p-8 md:pr-0 md:pt-24 lg:p-24 lg:pr-0 lg:pt-36 lg:pl-8 lg:w-[32%]'>
-					All products{' '}
-					<span className='block font-bold text-rustyred mt-2'>
-						{' '}
-						35% OFF
-					</span>
-					<a
-						href='#Products'
-						className='inline-block margin-auto text-base bg-rustyred mt-4 w-[200px] rounded-lg text-center p-2 text-white border-2 border-rustyred hover:bg-transparent hover:text-rustyred transition-colors duration-300'
-					>
-						Shop now <FaArrowRightLong className='inline' />
-					</a>
-				</p>
-				<p className='select-none absolute rotate-90 text-cyan -right-36 top-56 hidden font-bold text-[90px] opacity-[50%] -z-10 sm:block lg:text-[100px] lg:-right-48 lg:top-62 xl:-right-38 xl:text-[110px] xl:top-72 2xl:-right-36'>
+			<section className='min-h-[90vh] justify-center relative flex flex-col items-center pt-6 md:min-h-fit md:pt-8 md:flex-row md:items-center'>
+				<section className=' inline-block text-center text-4xl order-2 w-[100%] md:w-[40%] md:order-1 md:text-left xl:text-6xl md:p-8 md:pr-0 md:pt-24 lg:p-24 lg:pr-0 lg:pt-36 lg:pl-8 lg:w-[32%]'>
+					<p className='px-4'>
+						The latest and greatest laptop now available for
+						purchase
+					</p>
+					<p className='pt-4 px-4'>
+						<span className='block font-bold text-rustyred mt-2'>
+							{' '}
+							35% OFF
+						</span>
+						<a
+							href='#Products'
+							className='block ml-auto mr-auto text-base bg-rustyred mt-4 w-[250px] rounded-lg text-center p-2 text-white border-2 border-rustyred hover:bg-transparent hover:text-rustyred transition-colors duration-300 md:ml-0'
+						>
+							Shop now <FaArrowRightLong className='inline' />
+						</a>
+					</p>
+				</section>
+				<p className='select-none absolute rotate-90 text-cyan -right-36 top-72 hidden font-bold text-[90px] opacity-[50%] -z-10 sm:block lg:text-[80px] lg:-right-32 lg:top-62 xl:-right-36 xl:text-[90px] xl:top-72 2xl:-right-24'>
 					35% OFF
 				</p>
 				<img
