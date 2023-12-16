@@ -25,9 +25,10 @@ Labyrinth e-commerce </h1>
 
 -   [ ] Homepage
     -   [ ] Users should be able to view some featured products: carousel
-      -   [x] Thumbs
-      -   [x] Buttons
-      -   [ ] Swipe
+        -   [x] Thumbs
+        -   [x] Buttons
+        -   [ ] Swipe
+                
     -   [ ] Users should be able to view the entire catalog of available products in the store.
     -   [ ] Users should be able to filter the products in the catalog.
     -   [ ] Users should be able to add products to the cart/wishlist from this page.
