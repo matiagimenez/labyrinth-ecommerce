@@ -6,8 +6,8 @@ import { Image } from '../types';
 export const HomePage: FunctionComponent = () => {
 	return (
 		<>
-			<section className='relative flex flex-col items-center md:pt-8 md:flex-row md:items-start'>
-				<p className=' inline-block text-center text-5xl order-2 w-[100%] md:w-[40%] md:order-1 md:text-left xl:text-7xl md:p-8 md:pr-0 md:pt-24 lg:p-24 lg:pr-0 lg:pt-36'>
+			<section className='min-h-[90vh] md:min-h-fit justify-center relative flex flex-col items-center md:pt-8 md:flex-row md:items-start'>
+				<p className=' inline-block text-center text-5xl order-2 w-[100%] md:w-[40%] md:order-1 md:text-left xl:text-7xl md:p-8 md:pr-0 md:pt-24 lg:p-24 lg:pr-0 lg:pt-36 lg:pl-8 lg:w-[32%]'>
 					All products{' '}
 					<span className='block font-bold text-rustyred mt-2'>
 						{' '}
@@ -20,13 +20,13 @@ export const HomePage: FunctionComponent = () => {
 						Shop now <FaArrowRightLong className='inline' />
 					</a>
 				</p>
-				<p className='select-none absolute rotate-90 text-cyan -right-32 top-48 hidden font-bold text-[90px] opacity-[30%] -z-10 sm:block lg:text-[100px] xl:right-0 xl:text-[110px] xl:top-56'>
+				<p className='select-none absolute rotate-90 text-cyan -right-36 top-56 hidden font-bold text-[90px] opacity-[50%] -z-10 sm:block lg:text-[100px] lg:-right-48 lg:top-62 xl:-right-38 xl:text-[110px] xl:top-72 2xl:-right-36'>
 					35% OFF
 				</p>
 				<img
 					src='/images/laptop-homepage.png'
 					alt='Laptop image'
-					className='order-1 select-none w-[350px] h-[350px] inline-block transition-transform duration-500 hover:-rotate-3 sm:order-1 md:mt-2 md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] xl:w-[550px] xl:h-[550px]'
+					className='order-1 mb-8 select-none h-[300px] md:mb-0 inline-block md:mt-2 lg:h-[500px] xl:h-[600px]'
 				/>
 			</section>
 			<Carousel images={images} />
