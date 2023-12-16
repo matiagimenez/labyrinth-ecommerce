@@ -1,8 +1,6 @@
 import { FunctionComponent, useState } from 'react';
-import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import { Image } from '../../types';
-import { CarouselItem } from '..';
-import { range } from '../../utils/range';
+import { CarouselItem, CarouselControls } from '..';
 
 type CarouselProps = {
 	images: Image[];
@@ -11,23 +9,9 @@ type CarouselProps = {
 export const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
 	const [current, setCurrent] = useState<number>(2);
 
-	function handleForwardClick() {
-		if (current === images.length) return;
-		setCurrent(current + 1);
-	}
-
-	function handleBackClick() {
-		if (current === 1) return;
-		setCurrent(current - 1);
-	}
-
 	function handleItemClick(id: number) {
 		setCurrent(id);
 	}
-
-	const buttonStyles = `
-		bg-rustyred rounded-lg text-white text-xs p-2 mx-4
-	`;
 
 	return (
 		<section className='md:mt-24' id='Products'>
@@ -52,39 +36,11 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
 					);
 				})}
 			</ul>
-			<nav className='text-center mt-6'>
-				<button
-					onClick={handleBackClick}
-					className={`left-8 ${
-						current === 1 && 'opacity-0 cursor-default'
-					} ${buttonStyles}`}
-				>
-					<IoIosArrowBack />
-				</button>
-				{range(1, images.length + 1).map((index) => {
-					return (
-						<span
-							key={index}
-							onClick={() => {
-								handleItemClick(index);
-							}}
-							className={`cursor-pointer inline-block mb-0.5 w-[50px] h-[6px] ml-0.5 rounded-lg ${
-								index === current
-									? 'bg-rustyred'
-									: 'border border-pink bg-transparent'
-							}`}
-						/>
-					);
-				})}{' '}
-				<button
-					onClick={handleForwardClick}
-					className={`${
-						current === images.length && 'opacity-0 cursor-default'
-					} ${buttonStyles}`}
-				>
-					<IoIosArrowForward />
-				</button>
-			</nav>
+			<CarouselControls
+				setCurrent={setCurrent}
+				current={current}
+				amountOfImages={images.length}
+			/>
 		</section>
 	);
 };
