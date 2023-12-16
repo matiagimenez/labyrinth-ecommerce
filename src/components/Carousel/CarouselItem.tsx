@@ -22,7 +22,9 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 
 	if (id === current) {
 		return (
-			<li className={`${styles} shadow-md block relative`}>
+			<li
+				className={`${styles} shadow-md hover:shadow-xl transition-all duration-500 block relative`}
+			>
 				<img src={src} alt={alt} className='w-[220px] lg:w-[300px]' />
 				<p className='py-2 pb-4 font-medium text-center'>{alt}</p>
 				<a
@@ -40,7 +42,7 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 
 	return (
 		<li
-			className={`${styles} cursor-pointer opacity-50 hidden md:block`}
+			className={`${styles} cursor-pointer opacity-40 hidden md:block`}
 			onClick={() => handleItemClick(id)}
 		>
 			<img
