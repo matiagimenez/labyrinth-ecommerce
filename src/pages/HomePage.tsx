@@ -7,7 +7,7 @@ export const HomePage: FunctionComponent = () => {
 	return (
 		<>
 			<section className='min-h-[90vh] justify-center relative flex flex-col items-center pt-6 md:min-h-fit md:pt-8 md:flex-row md:items-center'>
-				<section className=' inline-block text-center text-4xl order-2 w-[100%] md:w-[40%] md:order-1 md:text-left xl:text-6xl md:p-8 md:pr-0 md:pt-24 lg:p-24 lg:pr-0 lg:pt-36 lg:pl-8 lg:w-[32%]'>
+				<section className=' inline-block text-center text-4xl order-2 w-[100%] md:w-[40%] md:order-1 md:text-left xl:text-6xl md:pr-0 md:pt-24 lg:p-24 lg:pr-0 lg:pt-36 lg:pl-8 lg:w-[32%]'>
 					<p className='px-4'>
 						The latest and greatest laptop now available for
 						purchase
@@ -31,7 +31,7 @@ export const HomePage: FunctionComponent = () => {
 				<img
 					src='/images/laptop-homepage.png'
 					alt='Laptop image'
-					className='order-1 mb-8 select-none h-[300px] md:mb-0 inline-block md:mt-2 lg:h-[500px] xl:h-[600px]'
+					className='order-1 mb-8 select-none h-[320px] md:mb-0 inline-block md:mt-20 lg:h-[500px] xl:h-[600px]'
 				/>
 			</section>
 			{/* <span className='opacity-0 block pt-20 md:pt-0' id='Products' /> */}
