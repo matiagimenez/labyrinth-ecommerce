@@ -18,16 +18,16 @@ Labyrinth e-commerce </h1>
 -   Estilos - [TailwindCSS 3.3.1](https://tailwindcss.com/docs/installation)
 -   Testing - [Jest](https://jestjs.io/)
 -   Build tool - [Vite](https://vitejs.dev/)
-  
+
 #### Demo: [Labyrinth](https://labyrinth-ecommerce.vercel.app/)
 
 ## Backlog
 
 -   [ ] Homepage
-    -   [ ] Users should be able to view some featured products: carousel
+    -   [x] Users should be able to view some featured products: carousel
         -   [x] Thumbs
         -   [x] Buttons
-        -   [ ] Swipe 
+        -   [x] Swipe
     -   [ ] Users should be able to view the entire catalog of available products in the store.
     -   [ ] Users should be able to filter the products in the catalog.
     -   [ ] Users should be able to add products to the cart/wishlist from this page.
