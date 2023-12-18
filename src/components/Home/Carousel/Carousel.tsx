@@ -1,5 +1,5 @@
 import { FunctionComponent, useState } from 'react';
-import { Image } from '../../types';
+import { Image } from '../../../types';
 import { CarouselItem, CarouselControls } from '.';
 
 type CarouselProps = {

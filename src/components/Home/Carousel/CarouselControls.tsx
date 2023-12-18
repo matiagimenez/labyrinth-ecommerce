@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import { range } from '../../utils/range';
+import { range } from '../../../utils/range';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
 type CarouselControlsProps = {

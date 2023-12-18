@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import { Image } from '../../types';
+import { Image } from '../../../types';
 // import { VscHeart, VscHeartFilled } from 'react-icons/vsc';
 import { VscHeart } from 'react-icons/vsc';
 
