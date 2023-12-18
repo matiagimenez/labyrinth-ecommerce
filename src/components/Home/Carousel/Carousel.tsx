@@ -17,14 +17,14 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
 		<section className='md:mt-24' id='Products'>
 			<h2 className='text-black text-2xl px-5 py-8 pb-4 pt-32 font-medium lg:text-2xl xl:text-3xl'>
 				Explore our{' '}
-				<span className='pb-4 mt-2 inline-block px-1 font-bold text-rustyred animate-bounce duration-1000 text-3xl lg:text-4xl'>
+				<span className='pb-2 mt-2 inline-block px-1 font-bold text-rustyred animate-bounce duration-1000 text-3xl lg:text-4xl'>
 					latest products
 				</span>
-				<span className='block font-extralight'>
+				<span className='block font-light'>
 					Perfect for work, gaming and everything in between
 				</span>
 			</h2>
-			<ul className='flex w-full items-center justify-center pb-6 px-4 gap-4 min-h-[400px] lg:gap-6'>
+			<ul className='flex w-full items-center justify-center mt-2 pb-6 px-4 gap-4 min-h-[400px] md:gap-6 xl:gap-4'>
 				{images.map((image: Image) => {
 					return (
 						<CarouselItem
