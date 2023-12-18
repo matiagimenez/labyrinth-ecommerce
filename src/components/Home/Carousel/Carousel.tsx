@@ -42,7 +42,7 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
 
 	return (
 		<section className='md:mt-24' id='Products'>
-			<h2 className='text-black text-2xl px-5 py-8 pb-4 pt-32 font-medium lg:text-2xl xl:text-3xl'>
+			<h2 className='text-black text-2xl px-5 py-8 pb-4 pt-28 md:pt-32 font-medium lg:text-2xl xl:text-3xl'>
 				Explore our{' '}
 				<span className='pb-2 mt-2 inline-block px-1 font-bold text-rustyred animate-bounce duration-1000 text-3xl lg:text-4xl'>
 					latest products

@@ -6,7 +6,7 @@ import { Image } from '../types';
 export const HomePage: FunctionComponent = () => {
 	return (
 		<>
-			<section className='overflow-hidden min-h-[90vh] justify-center pb-16 relative flex flex-col items-center md:min-h-fit md:pt-8 md:flex-row md:items-center xl:mt-2'>
+			<section className='overflow-hidden min-h-[90vh] justify-center pb-20 relative flex flex-col items-center md:min-h-fit md:pt-8 md:flex-row md:items-center xl:mt-2'>
 				<section className=' inline-block text-center text-4xl order-2 w-[100%] md:w-[40%] md:order-1 md:text-left lg:text-5xl 2xl:text-6xl md:pr-0 md:pt-24 lg:p-24 lg:pr-0 lg:pt-36 lg:pl-8 xl:w-[35%]'>
 					<p className='px-4'>
 						The latest and greatest laptop now available for
