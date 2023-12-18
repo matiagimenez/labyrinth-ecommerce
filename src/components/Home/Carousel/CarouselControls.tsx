@@ -38,7 +38,7 @@ export const CarouselControls: FunctionComponent<CarouselControlsProps> = ({
 						onClick={() => {
 							setCurrent(index);
 						}}
-						className={`transition-all duration-200 cursor-pointer inline-block mb-0.5 w-[40px] h-[6px] ml-0.5 rounded-lg ${
+						className={`transition-all duration-200 cursor-pointer inline-block mb-0.5 w-[40px] md:w-[50px] h-[6px] ml-0.5 rounded-lg ${
 							index === current
 								? 'bg-rustyred'
 								: 'border border-pink bg-transparent'
