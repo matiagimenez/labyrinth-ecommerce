@@ -7,8 +7,8 @@ export const HomePage: FunctionComponent = () => {
 	return (
 		<>
 			<section className='overflow-hidden min-h-[90vh] justify-center pb-20 relative flex flex-col items-center md:min-h-fit lg:pt-8 lg:flex-row lg:items-start'>
-				<section className=' inline-block text-center text-4xl order-2 mt-4 lg:w-[40%] lg:order-1 lg:text-left md:text-5xl lg:text-6xl md:mt-8 2xl:text-7xl md:pr-0 lg:p-28 lg:pr-0 lg:pt-16 lg:pl-6 2xl:pl-0 xl:w-[35%]'>
-					<p className='px-4 lg:leading-[4rem]'>
+				<section className=' inline-block text-center text-4xl order-2 mt-4 lg:w-[40%] lg:order-1 lg:text-left md:text-5xl lg:text-[3.2rem] md:mt-8 2xl:text-7xl md:pr-0 lg:p-28 lg:pr-0 lg:pt-16 lg:pl-6 2xl:pl-0 xl:w-[35%]'>
+					<p className='px-4'>
 						The latest and greatest laptop now available for
 						purchase
 					</p>
@@ -19,7 +19,7 @@ export const HomePage: FunctionComponent = () => {
 						</span>
 						<a
 							href='#Products'
-							className='block ml-auto mr-auto text-base bg-rustyred mt-4 w-[250px] rounded-lg text-center p-2 text-white border-2 border-rustyred hover:bg-transparent hover:text-rustyred transition-colors duration-300 lg:ml-0'
+							className='block ml-auto mr-auto text-base bg-rustyred mt-4 w-[250px] rounded-lg text-center p-2 text-white border-2 border-rustyred hover:bg-transparent hover:text-rustyred transition-colors duration-300 lg:ml-0 lg:mt-6'
 						>
 							Shop now <FaArrowRightLong className='inline' />
 						</a>
