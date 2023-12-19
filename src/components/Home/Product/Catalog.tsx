@@ -31,7 +31,7 @@ export const Catalog: FunctionComponent = () => {
 			{status === 'success' && (
 				<ResultsMessage amount={products.length} />
 			)}
-
+			{/* TODO: Replace flex with grid layout */}
 			<section className='flex flex-row flex-wrap gap-4 mt-2'>
 				{status === 'loading' && 'Loading...'}
 				{status === 'searching' && 'Searching...'}
