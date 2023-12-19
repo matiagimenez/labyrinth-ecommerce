@@ -9,7 +9,7 @@ const products = [
 		RTX 3070Ti`,
 		name: `Alienware M15 R7 
 		15.6″`,
-		category: 'gamer',
+		category: 'gaming',
 		brand: 'Alienware',
 		stock: 10,
 		price: 1275890,
@@ -212,7 +212,7 @@ const products = [
 		RTX 3070 8GB`,
 		name: `MSI Pulse GL76 
 		17.3″`,
-		category: 'gamer',
+		category: 'gaming',
 		brand: 'Alienware',
 		stock: 1,
 		price: 989890,
@@ -316,7 +316,7 @@ const products = [
 		RTX 3050Ti`,
 		name: `Lenovo IdeaPad Gaming 3 
 		15.6″`,
-		category: 'gamer',
+		category: 'gaming',
 		brand: 'Lenovo',
 		stock: 5,
 		price: 449890,
