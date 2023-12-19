@@ -1,16 +1,19 @@
-export const products = [
+import { Product } from '../types/Product';
+const products = [
 	{
 		id: 'alienware-m15-r7-240hz-core-i7-12700h-16gb-512gb-rtx-3070ti',
-		name: `Alienware M15 R7 
+		title: `Alienware M15 R7 
 		15.6″ 240hz 
 		Core i7 12700H 
 		16GB / 512GB 
 		RTX 3070Ti`,
+		name: `Alienware M15 R7 
+		15.6″`,
 		category: 'gamer',
 		brand: 'Alienware',
 		stock: 10,
 		price: 1275890,
-		priceCurrency: 'ARS',
+		priceCurrency: '$',
 		enabled: false,
 		images: [
 			'01-600x600.jpg',
@@ -105,12 +108,13 @@ export const products = [
 	},
 	{
 		id: 'apple-macbook-pro-M2-pro-12-core-16gb-512gb-space-gray',
-		name: `Apple MacBook Pro 16″ M2 PRO 12 Core 16GB 512GB Space Gray`,
+		title: `Apple MacBook Pro 16″ M2 PRO 12 Core 16GB 512GB Space Gray`,
+		name: `Apple MacBook Pro 16″`,
 		category: 'notebooks',
 		brand: 'Apple',
 		stock: 5,
 		price: 3590890,
-		priceCurrency: 'ARS',
+		priceCurrency: '$',
 		enabled: false,
 		images: [
 			'01-600x600.webp',
@@ -201,16 +205,18 @@ export const products = [
 	},
 	{
 		id: 'msi-pulse-gl76-17-3-144hz-i7-12th-gen-16gb-512gb-rtx-3070-8gb',
-		name: `MSI Pulse GL76 
+		title: `MSI Pulse GL76 
 		17.3″ 144hz 
 		i7 12th Gen 
 		16GB / 512GB 
 		RTX 3070 8GB`,
+		name: `MSI Pulse GL76 
+		17.3″`,
 		category: 'gamer',
 		brand: 'Alienware',
 		stock: 1,
 		price: 989890,
-		priceCurrency: 'ARS',
+		priceCurrency: '$',
 		enabled: true,
 		images: [
 			'01-600x600.jpg',
@@ -303,16 +309,18 @@ export const products = [
 	},
 	{
 		id: 'lenovo-ideapad-gaming-3-120hz-ryzen-5-8gb-256gb-rtx-3050ti',
-		name: `Lenovo IdeaPad Gaming 3 
+		title: `Lenovo IdeaPad Gaming 3 
 		15.6″ 120hz 
 		Ryzen 5 
 		8GB / 256GB 
 		RTX 3050Ti`,
+		name: `Lenovo IdeaPad Gaming 3 
+		15.6″`,
 		category: 'gamer',
 		brand: 'Lenovo',
 		stock: 5,
 		price: 449890,
-		priceCurrency: 'ARS',
+		priceCurrency: '$',
 		enabled: true,
 		images: [
 			'01-600x600.jpg',
@@ -405,15 +413,17 @@ export const products = [
 	},
 	{
 		id: 'asus-vivobook-pro-14-oled-core-i5-11300h-8gb-256gb',
-		name: `Asus Vivobook Pro 
+		title: `Asus Vivobook Pro 
 		14 OLED 
 		Core i5 11300H 
 		8GB / 256GB`,
+		name: `Asus Vivobook Pro 
+		14`,
 		category: 'notebooks',
 		brand: 'Asus',
 		stock: 12,
 		price: 284890,
-		priceCurrency: 'ARS',
+		priceCurrency: '$',
 		enabled: true,
 		images: [
 			'01-600x600.jpg',
@@ -501,16 +511,18 @@ export const products = [
 	},
 	{
 		id: 'asus-zenbook-flip-2en1-ryzen-7-5700u-8gb-256gb-geforce-mx450',
-		name: `Asus ZenBook Flip 2in1 
+		title: `Asus ZenBook Flip 2in1 
 		15.6″ 
 		Ryzen 7 5700U 
 		8GB / 256GB 
 		GeForce MX450`,
+		name: `Asus ZenBook Flip 2in1 
+		15.6″`,
 		category: 'notebooks',
 		brand: 'Asus',
 		stock: 9,
 		price: 389890,
-		priceCurrency: 'ARS',
+		priceCurrency: '$',
 		enabled: true,
 		images: [
 			'01.jpg',
@@ -603,15 +615,17 @@ export const products = [
 	},
 	{
 		id: 'lenovo-ideapad-3-14-ryzen-5-8gb-256-gb-ssd',
-		name: `Lenovo IdeaPad 3 
+		title: `Lenovo IdeaPad 3 
 		14″ 
 		Ryzen 5 
 		8GB / 256GB SSD`,
+		name: `Lenovo IdeaPad 3 
+		14″`,
 		category: 'notebooks',
 		brand: 'Asus',
 		stock: 0,
 		price: 279_890,
-		priceCurrency: 'ARS',
+		priceCurrency: '$',
 		enabled: true,
 		images: [
 			'01.jpg',
@@ -701,15 +715,13 @@ export const products = [
 	},
 	{
 		id: 'new-kindle-paperwhite-6-8-16gb-waterproof-11th-gen-black',
-		name: `New Kindle Paperwhite 6.8″ 16GB 
-    Waterproof 
-    11th Gen 
-    Black`,
+		title: `New Kindle Paperwhite 6.8″ 16GB Waterproof 11th Gen Black`,
+		name: `New Kindle Paperwhite 11th Gen`,
 		category: 'gadgets',
 		brand: 'Kindle',
 		stock: 2,
 		price: 81890,
-		priceCurrency: 'ARS',
+		priceCurrency: '$',
 		enabled: true,
 		images: ['01.jpg', '02.jpg', '03.jpg', '04.jpg'],
 		banner: 'banner.jpg',
@@ -718,12 +730,13 @@ export const products = [
 	},
 	{
 		id: 'bobovr-m2-pro-oculus-quest-2-halo-strap',
-		name: `BoboVR M2 PRO Oculus Quest 2 Halo Strap`,
+		title: `BoboVR M2 PRO Oculus Quest 2 Halo Strap`,
+		name: `BoboVR M2 PRO Oculus Quest`,
 		category: 'gadgets',
 		brand: 'BoboVR',
 		stock: 5,
 		price: 139890,
-		priceCurrency: 'ARS',
+		priceCurrency: '$',
 		enabled: true,
 		images: [
 			'01-600x600.webp',
@@ -738,28 +751,29 @@ export const products = [
 	},
 ];
 
-// const DELAY = 200;
+const DELAY = 200;
 
-// export const getProducts = () => {
-// 	return new Promise((resolve) => {
-// 		setTimeout(() => {
-// 			resolve(products);
-// 		}, DELAY);
-// 	});
-// };
+export const getProducts = (): Promise<Product[]> => {
+	return new Promise((resolve) => {
+		setTimeout(() => {
+			resolve(products);
+		}, DELAY);
+	});
+};
 
-// export const getProductById = (id) => {
-// 	return new Promise((resolve) => {
-// 		setTimeout(() => {
-// 			resolve(products.find((prod) => prod.id === id));
-// 		}, DELAY);
-// 	});
-// };
+export const getProductById = (id: string): Promise<Product> => {
+	return new Promise((resolve) => {
+		setTimeout(() => {
+			const product = products.find((prod: Product) => prod.id === id);
+			resolve(product as Product);
+		}, DELAY);
+	});
+};
 
-// export const getProductsByCategory = (category) => {
-// 	return new Promise((resolve) => {
-// 		setTimeout(() => {
-// 			resolve(products.filter((prod) => prod.category === category));
-// 		}, DELAY);
-// 	});
-// };
+export const getProductsByCategory = (category: string): Promise<Product[]> => {
+	return new Promise((resolve) => {
+		setTimeout(() => {
+			resolve(products.filter((prod) => prod.category === category));
+		}, DELAY);
+	});
+};
