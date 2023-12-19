@@ -1,15 +1,21 @@
-import { FunctionComponent } from 'react';
-import { HeaderButton } from './HeaderButton';
-import { PiShoppingCart , PiShoppingCartFill } from 'react-icons/pi';
+import { FunctionComponent, useState } from 'react';
+import { Button } from './Button';
+import { PiShoppingCart, PiShoppingCartFill } from 'react-icons/pi';
 
 export const ShoppingCart: FunctionComponent = () => {
+	const [isOpen, setIsOpen] = useState(false);
+
 	return (
-		<li className='ml-3 md:ml-5'>
-			<HeaderButton
+		<>
+			<Button
 				active={<PiShoppingCartFill />}
-				inactive={<PiShoppingCart  />}
+				inactive={<PiShoppingCart />}
+				isActive={isOpen}
+				handleClick={() => {
+					setIsOpen(!isOpen);
+				}}
 			/>
 			{/* <MenuList/> */}
-		</li>
+		</>
 	);
 };

@@ -7,8 +7,12 @@ export const Header = () => {
 			<Logo />
 			<nav className='inline-block w-[40%] absolute top-9 right-12 sm:right-10 md:right-32'>
 				<ul className='flex cont-right h-full items-bottom justify-end'>
-					<WishList />
-					<ShoppingCart />
+					<li>
+						<WishList />
+					</li>
+					<li className='ml-3 md:ml-5'>
+						<ShoppingCart />
+					</li>
 				</ul>
 			</nav>
 		</header>
