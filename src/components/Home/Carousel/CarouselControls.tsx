@@ -22,7 +22,7 @@ export const CarouselControls: FunctionComponent<CarouselControlsProps> = ({
     `;
 
 	return (
-		<nav className='text-center mt-6'>
+		<nav className='text-center mt-2'>
 			<button
 				onClick={handlePrevious}
 				className={`left-8 ${
