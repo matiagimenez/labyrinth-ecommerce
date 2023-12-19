@@ -6,8 +6,8 @@ import { Image } from '../types';
 export const HomePage: FunctionComponent = () => {
 	return (
 		<>
-			<section className='overflow-hidden min-h-[90vh] justify-center pb-20 relative flex flex-col items-center md:min-h-fit md:pt-8 md:flex-row md:items-center xl:mt-2'>
-				<section className=' inline-block text-center text-4xl order-2 w-[100%] md:w-[40%] md:order-1 md:text-left lg:text-5xl 2xl:text-6xl md:pr-0 md:pt-24 lg:p-24 lg:pr-0 lg:pt-36 lg:pl-8 xl:w-[35%]'>
+			<section className='overflow-hidden min-h-[90vh] justify-center pb-20 relative flex flex-col items-center md:min-h-fit md:pt-8 md:flex-row md:items-center lg:items-start'>
+				<section className=' inline-block text-center text-4xl order-2 w-[100%] md:w-[40%] md:order-1 md:text-left lg:text-5xl 2xl:text-6xl md:pr-0 md:pt-24 lg:p-28 lg:pr-0 lg:pt-16 lg:pl-6 xl:pt-24 xl:w-[35%]'>
 					<p className='px-4'>
 						The latest and greatest laptop now available for
 						purchase
@@ -25,13 +25,13 @@ export const HomePage: FunctionComponent = () => {
 						</a>
 					</p>
 				</section>
-				<p className='select-none absolute rotate-90 text-cyan -right-36 top-72 hidden font-bold text-[90px] opacity-[50%] -z-10 sm:block lg:text-[80px] lg:-right-32 lg:top-62 xl:-right-36 xl:text-[90px] xl:top-72 2xl:-right-24'>
+				<p className='select-none absolute rotate-90 text-cyan -right-36 top-72 hidden font-bold text-[90px] opacity-[50%] -z-10 sm:block lg:text-[80px] lg:-right-32 lg:top-56 xl:-right-36 xl:text-[90px] xl:top-56 2xl:-right-24'>
 					35% OFF
 				</p>
 				<img
 					src='/images/laptop-homepage.png'
 					alt='Laptop image'
-					className='order-1 mb-8 select-none h-[320px] md:mb-0 inline-block md:mt-20 lg:h-[450px] xl:h-[600px]'
+					className='order-1 mb-8 select-none h-[320px] md:mb-0 inline-block md:mt-20 lg:mt-2 lg:h-[450px] xl:mt-0 xl:h-[500px] 2xl:h-[550px]'
 				/>
 			</section>
 			<Carousel images={images} />

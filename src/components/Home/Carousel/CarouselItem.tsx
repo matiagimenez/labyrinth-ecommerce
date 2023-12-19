@@ -31,7 +31,7 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 					className='ml-auto mr-auto w-[300px] md:w-[320px] xl:w-[270px] 2xl:w-[300px] px-4'
 				/>
 				<section className='bg-cyan-700 pb-6 border border-cyan-500  rounded-b-xl px-4'>
-					<p className='border-t w-auto pl-2 pt-4 text-xl lg:text-lg pb-4 font-medium'>
+					<p className='border-t w-auto pl-2 pt-4 text-base xl:text-xl pb-4 font-medium'>
 						{alt}
 					</p>
 					<a
@@ -63,7 +63,7 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 				className='select-text w-[180px] lg:w-[200px] ml-auto mr-auto block px-4'
 			/>
 			<section className='bg-cyan-800 pb-6 px-4'>
-				<p className='py-2 opacity-30 p-2 pb-4 font-medium text-center'>
+				<p className='py-2 opacity-30 p-2 text-sm xl:text-base pb-4 font-medium text-center'>
 					{alt}
 				</p>
 				<a
