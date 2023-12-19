@@ -36,7 +36,9 @@ export const Catalog: FunctionComponent = () => {
 				{status === 'searching' && 'Searching...'}
 				{status === 'success' &&
 					products.map((product) => {
-						return <CatalogItem product={product} />;
+						return (
+							<CatalogItem key={product.id} product={product} />
+						);
 					})}
 			</section>
 		</section>
