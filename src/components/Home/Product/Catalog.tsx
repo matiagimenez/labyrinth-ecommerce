@@ -42,7 +42,6 @@ export const Catalog: FunctionComponent = () => {
 
 	function handleFormChange(property: string, value: string | number) {
 		setForm({ ...form, [property]: value });
-		console.log({ ...form, [property]: value });
 	}
 
 	useEffect(() => {
