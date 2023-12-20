@@ -25,25 +25,27 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 			<li
 				className={`${styles} min-w-[330px] max-w-[330px] md:min-w-[300px] md:max-w-[340px] xl:min-w-[350px] xl:max-w-[352px] shadow-md hover:shadow-lg transition-opacity duration-300 block relative`}
 			>
-				<img
-					src={src}
-					alt={alt}
-					className='ml-auto mr-auto w-[300px] md:w-[320px] xl:w-[270px] 2xl:w-[300px] px-4'
-				/>
-				<section className='bg-cyan-700 pb-6 border border-cyan-500  rounded-b-xl px-4'>
-					<p className='border-t w-auto pl-2 pt-4 text-base xl:text-xl pb-4 font-medium'>
-						{alt}
-					</p>
-					<a
-						href={href}
-						className='bg-rustyred text-white py-2 ml-2 w-[120px] rounded text-xs text-center block hover:opacity-90'
-					>
-						View details
-					</a>
-					<button className='absolute bottom-8 right-10 text-rustyred text-2xl'>
-						<VscHeart />
-					</button>
-				</section>
+				<figure>
+					<img
+						src={src}
+						alt={alt}
+						className='ml-auto mr-auto w-[300px] md:w-[320px] xl:w-[270px] 2xl:w-[300px] px-4'
+					/>
+					<figcaption className='bg-cyan-700 pb-6 border border-cyan-500  rounded-b-xl px-4'>
+						<p className='border-t w-auto pl-2 pt-4 text-base xl:text-xl pb-4 font-medium'>
+							{alt}
+						</p>
+						<a
+							href={href}
+							className='bg-rustyred text-white py-2 ml-2 w-[120px] rounded text-xs text-center block hover:opacity-90'
+						>
+							View details
+						</a>
+						<button className='absolute bottom-8 right-10 text-rustyred text-2xl'>
+							<VscHeart />
+						</button>
+					</figcaption>
+				</figure>
 			</li>
 		);
 	}
