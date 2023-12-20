@@ -751,7 +751,7 @@ const products = [
 	},
 ];
 
-const DELAY = 200;
+const DELAY = 300;
 
 export const getProducts = (
 	filter: string,
