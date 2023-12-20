@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import { Button } from '../..';
+import { Button, Tooltip } from '../..';
 import { Product } from '../../../types';
 import { PiShoppingCart, PiShoppingCartFill } from 'react-icons/pi';
 
@@ -39,9 +39,10 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 						isActive={false}
 						handleClick={() => {}}
 					/>
-					<span className='border block w-max group-hover:opacity-100 transition-opacity duration-500 px-2 bg-cyan-500 p-1 text-[12px] rounded-sm absolute -right-6 bottom-[42px] font-medium opacity-0 m-0 mx-auto'>
-						Add to cart
-					</span>
+					<Tooltip
+						text='Add to cart'
+						position='-right-6 bottom-[40px]'
+					/>
 				</p>
 			</footer>
 		</article>

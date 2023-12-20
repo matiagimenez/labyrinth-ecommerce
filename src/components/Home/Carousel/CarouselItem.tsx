@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import { Image } from '../../../types';
-// import { VscHeart, VscHeartFilled } from 'react-icons/vsc';
-import { VscHeart } from 'react-icons/vsc';
+import { VscHeart, VscHeartFilled } from 'react-icons/vsc';
+import { Button, Tooltip } from '../../';
 
 type CarouselItemProps = {
 	image: Image;
@@ -32,18 +32,27 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 						className='ml-auto mr-auto w-[300px] md:w-[320px] xl:w-[270px] 2xl:w-[300px] px-4'
 					/>
 					<figcaption className='bg-cyan-700 pb-6 border border-cyan-500  rounded-b-xl px-4'>
-						<p className='border-t w-auto pl-2 pt-4 text-base xl:text-xl pb-4 font-medium'>
+						<p className='border-t w-auto pl-2 pt-4 text-lg pb-4 font-medium'>
 							{alt}
 						</p>
 						<a
 							href={href}
-							className='bg-rustyred text-white py-2 ml-2 w-[120px] rounded text-xs text-center block hover:opacity-90'
+							className='bg-rustyred text-white py-2 ml-2 w-[120px] rounded text-xs text-center inline-block hover:opacity-90'
 						>
 							View details
 						</a>
-						<button className='absolute bottom-8 right-10 text-rustyred text-2xl'>
-							<VscHeart />
-						</button>
+						<p className='relative inline-block group top-1 lg:top-2 left-32'>
+							<Button
+								active={<VscHeartFilled />}
+								inactive={<VscHeart />}
+								isActive={false}
+								handleClick={() => {}}
+							/>
+							<Tooltip
+								text='Add to wishlist'
+								position='-right-9 bottom-[38px]'
+							/>
+						</p>
 					</figcaption>
 				</figure>
 			</li>
