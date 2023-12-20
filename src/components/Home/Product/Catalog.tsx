@@ -1,32 +1,72 @@
-import { FunctionComponent, useEffect, useState } from 'react';
+import {
+	ChangeEvent,
+	FunctionComponent,
+	useCallback,
+	useEffect,
+	useState,
+} from 'react';
 import { Product } from '../../../types';
 import { getProducts } from '../../../data/asyncProducts';
 import { FiltersForm, ResultsMessage } from '../..';
 import { CatalogItem } from './CatalogItem';
 
+type Form = {
+	filter: string;
+	minPrice: number;
+	maxPrice: number;
+	category: string;
+};
+
+const initialForm: Form = {
+	filter: '',
+	minPrice: 0,
+	maxPrice: 999999999,
+	category: 'all',
+};
+
 export const Catalog: FunctionComponent = () => {
 	const [products, setProducts] = useState<Product[]>([]);
 	const [status, setStatus] = useState<string>('idle');
+	const [form, setForm] = useState<Form>(initialForm);
 
-	const fetchProductsData = async () => {
+	const fetchProductsData = useCallback(async () => {
 		setStatus('loading');
-		const productsData: Product[] = await getProducts();
+		const { filter, minPrice, maxPrice, category } = form;
+		const productsData: Product[] = await getProducts(
+			filter,
+			minPrice,
+			maxPrice,
+			category
+		);
+
 		if (productsData.length > 0) {
 			setProducts(productsData);
 			setStatus('success');
 		} else {
 			setStatus('error');
 		}
-	};
+	}, [form]);
+
+	function handleFormChange(event: ChangeEvent<HTMLInputElement>) {
+		const property = event.target.name;
+		const value =
+			property === 'minPrice' || property === 'maxPrice'
+				? Number(event.target.value)
+				: event.target.value;
+
+		const nextForm = { ...form, [property]: value };
+		console.log(nextForm);
+		setForm({ ...form, [property]: value });
+	}
 
 	useEffect(() => {
 		fetchProductsData();
-	}, []);
+	}, [fetchProductsData]);
 
 	return (
 		<section className='mt-8'>
 			<h2 className='opacity-0'>Products</h2>
-			<FiltersForm />
+			<FiltersForm handleFormChange={handleFormChange} />
 			{status === 'error' && <ResultsMessage amount={0} />}
 			{status === 'success' && (
 				<ResultsMessage amount={products.length} />
@@ -34,6 +74,7 @@ export const Catalog: FunctionComponent = () => {
 			<section className='grid px-6 min-w-[360px] max-w-[400px] w-[80%] ml-auto mr-auto sm:max-w-[100%] sm:w-auto sm:ml-0 grid-cols-1 justify-items-center gap-y-4 gap-x-4 mt-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5'>
 				{status === 'loading' && 'Loading...'}
 				{status === 'searching' && 'Searching...'}
+				{status === 'error' && <p>No results found</p>}
 				{status === 'success' &&
 					products.map((product) => {
 						return (

@@ -753,10 +753,34 @@ const products = [
 
 const DELAY = 200;
 
-export const getProducts = (): Promise<Product[]> => {
+export const getProducts = (
+	filter: string,
+	minPrice: number,
+	maxPrice: number,
+	category: string
+): Promise<Product[]> => {
 	return new Promise((resolve) => {
+		let filteredProducts: Product[] = [...products];
+
+		if (category !== 'all') {
+			filteredProducts = filteredProducts.filter(
+				(product: Product) => product.category === category
+			);
+		}
+
+		filteredProducts = filteredProducts.filter(
+			(product: Product) =>
+				product.price >= minPrice && product.price <= maxPrice
+		);
+
+		if (filter !== '') {
+			filteredProducts = filteredProducts.filter((product: Product) =>
+				product.name.includes(filter)
+			);
+		}
+
 		setTimeout(() => {
-			resolve(products);
+			resolve(filteredProducts);
 		}, DELAY);
 	});
 };
