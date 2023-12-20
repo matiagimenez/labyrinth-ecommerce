@@ -5,3 +5,4 @@ export * from './Header/WishList';
 export * from './Home/Carousel/';
 export * from './Home/Product/';
 export * from './Tooltip';
+export * from './Loader';

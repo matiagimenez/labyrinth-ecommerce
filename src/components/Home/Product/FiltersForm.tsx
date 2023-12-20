@@ -1,13 +1,7 @@
-import {
-	FunctionComponent,
-	ChangeEvent,
-	useState,
-	MouseEvent,
-	useRef,
-} from 'react';
+import { FunctionComponent, useState, MouseEvent } from 'react';
 
 type FiltersFormProps = {
-	handleFormChange: (event: ChangeEvent<HTMLInputElement>) => void;
+	handleFormChange: (property: string, value: string | number) => void;
 };
 
 export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
@@ -15,7 +9,6 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 }) => {
 	// all | notebooks | gaming | gadgets
 	const [category, setCategory] = useState('all');
-	const categoryInput = useRef<HTMLInputElement>(null);
 
 	const inputStyles =
 		'p-2 mt-1 border-2 rounded outline-rustyred border-brightpink';
@@ -24,17 +17,13 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 		'[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none';
 
 	function handleCategoryChange(event: MouseEvent<HTMLInputElement>) {
-		const nextCategory = event.currentTarget.name;
-		setCategory(nextCategory);
-
-		if (categoryInput.current) {
-			categoryInput.current.value = nextCategory;
-		}
+		setCategory(event.currentTarget.name);
+		handleFormChange('category', event.currentTarget.name);
 	}
 
 	return (
 		<form action='' className='pl-4'>
-			<fieldset className='inline-block w-[45%]'>
+			<fieldset className='inline-block w-[45%] md:w-[20%]'>
 				<label className='mr-2 6 font-light block' htmlFor='filter'>
 					Filter
 				</label>
@@ -44,10 +33,12 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					name='filter'
 					autoComplete='off'
 					className={`${inputStyles} w-[100%] md:w-[300px]`}
-					onChange={handleFormChange}
+					onChange={(event) =>
+						handleFormChange(event.target.name, event.target.value)
+					}
 				/>
 			</fieldset>
-			<fieldset className='mt-4 inline w-[45%] ml-4 md:ml-8'>
+			<fieldset className='mt-4 inline w-[45%] ml-4 md:ml-6 md:w-[20%]'>
 				<label
 					className='mr-2 6 font-light block md:mt-0'
 					htmlFor='min'
@@ -60,7 +51,16 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					id='min'
 					placeholder='$ Min'
 					className={`${inputStyles} w-[45%] md:w-[145px] mr-2 ${removeArrowsStyle}`}
-					onChange={handleFormChange}
+					onChange={(event) => {
+						if (!event.target.value) {
+							handleFormChange(event.target.name, 0);
+						} else {
+							handleFormChange(
+								event.target.name,
+								Number(event.target.value)
+							);
+						}
+					}}
 				/>
 				<input
 					type='number'
@@ -68,10 +68,19 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					placeholder='$ Max'
 					autoComplete='off'
 					className={`${inputStyles} w-[45%] md:w-[145px] ${removeArrowsStyle}`}
-					onChange={handleFormChange}
+					onChange={(event) => {
+						if (!event.target.value) {
+							handleFormChange(event.target.name, 999999999);
+						} else {
+							handleFormChange(
+								event.target.name,
+								Number(event.target.value)
+							);
+						}
+					}}
 				/>
 			</fieldset>
-			<fieldset className='inline-block w-[100%] mt-4'>
+			<fieldset className='inline-block w-[100%] mt-4 md:mt-0 md:ml-6 md:w-[45%]'>
 				<label
 					className='mr-2 6 font-light block md:mt-0'
 					htmlFor='min'
@@ -80,54 +89,44 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 				</label>
 
 				<input
-					type='hidden'
-					className='hidden'
-					onChange={() => {
-						console.log('change');
-					}}
-					value={category}
-					ref={categoryInput}
+					type='button'
+					value='All'
+					name='all'
+					className={`${inputStyles} cursor-pointer border-r-0 border-rustyred rounded-r-none transition-colors ${
+						category === 'all' &&
+						` bg-rustyred border-rustyred text-white`
+					} w-fit px-4 md:w-[145px] ${removeArrowsStyle}`}
+					onClick={handleCategoryChange}
 				/>
-
 				<input
 					type='button'
-					name='all'
-					value='All'
-					className={`${inputStyles} cursor-pointer border-r-0 rounded-r-none transition-colors ${
-						category === 'all' &&
+					value='Notebooks'
+					name='notebooks'
+					className={`${inputStyles} border-rustyred cursor-pointer rounded-none transition-colors ${
+						category === 'notebooks' &&
+						` bg-rustyred border-rustyred text-white`
+					} w-fit px-4 md:w-[145px] ${removeArrowsStyle}`}
+					onClick={handleCategoryChange}
+				/>
+				<input
+					type='button'
+					value='Gaming'
+					name='gaming'
+					className={`${inputStyles} border-rustyred cursor-pointer rounded-none border-l-0 transition-colors ${
+						category === 'gaming' &&
 						`bg-rustyred border-rustyred text-white`
 					} w-fit px-4 md:w-[145px] ${removeArrowsStyle}`}
 					onClick={handleCategoryChange}
 				/>
 				<input
 					type='button'
-					name='notebooks'
-					className={`${inputStyles} cursor-pointer rounded-none transition-colors ${
-						category === 'notebooks' &&
-						`border-x-0 bg-rustyred border-rustyred text-white`
-					} w-fit px-4 md:w-[145px] ${removeArrowsStyle}`}
-					onClick={handleCategoryChange}
-					value='Notebooks'
-				/>
-				<input
-					type='button'
-					name='gaming'
-					className={`${inputStyles} cursor-pointer rounded-none border-l-0 transition-colors ${
-						category === 'gaming' &&
-						`border-x-0 bg-rustyred border-rustyred text-white`
-					} w-fit px-4 md:w-[145px] ${removeArrowsStyle}`}
-					onClick={handleCategoryChange}
-					value='Gaming'
-				/>
-				<input
-					type='button'
-					name='gadgets'
-					className={`${inputStyles} cursor-pointer rounded-l-none border-l-0 transition-colors ${
-						category === 'gadgets' &&
-						`bg-rustyred border-l-0 border-rustyred text-white`
-					} w-fit px-4 md:w-[145px] ${removeArrowsStyle}`}
-					onClick={handleCategoryChange}
 					value='Gadgets'
+					name='gadgets'
+					className={`${inputStyles} border-rustyred cursor-pointer rounded-l-none border-l-0 transition-colors ${
+						category === 'gadgets' &&
+						` bg-rustyred border-rustyred text-white`
+					} w-fit px-4 md:w-[145px] ${removeArrowsStyle}`}
+					onClick={handleCategoryChange}
 				/>
 			</fieldset>
 		</form>
