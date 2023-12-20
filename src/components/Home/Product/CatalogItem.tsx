@@ -2,6 +2,7 @@ import { FunctionComponent } from 'react';
 import { Button, Tooltip } from '../..';
 import { Product } from '../../../types';
 import { PiShoppingCart, PiShoppingCartFill } from 'react-icons/pi';
+import { formatPrice } from '../../../utils';
 
 type CatalogItemProps = {
 	product: Product;
@@ -29,8 +30,8 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 			</figure>
 
 			<footer className='p-4 pr-8 flex justify-between items-center'>
-				<span className='font-medium'>
-					{priceCurrency} {price}
+				<span className='font-semibold text-green-500'>
+					{priceCurrency} {formatPrice(price)}
 				</span>
 				<p className='relative group'>
 					<Button

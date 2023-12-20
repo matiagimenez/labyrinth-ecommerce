@@ -1,8 +1,4 @@
-export const range = (
-	start: number,
-	end: number,
-	step: number = 1
-): number[] => {
+export function range(start: number, end: number, step: number = 1): number[] {
 	const output = [];
 
 	if (typeof end === 'undefined') {
@@ -15,4 +11,4 @@ export const range = (
 	}
 
 	return output;
-};
+}
