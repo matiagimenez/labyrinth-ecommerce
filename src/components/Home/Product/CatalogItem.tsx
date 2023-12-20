@@ -17,15 +17,18 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 			<span className='absolute top-2 right-2 bg-brightpink text-cyan-900 py-1 px-2 rounded-xl text-[11px] font-medium'>
 				{category.toUpperCase()}
 			</span>
-			<img
-				src={src}
-				alt={name}
-				className='h-[250px] ml-auto mr-auto p-2 xl:h-[240px]'
-			/>
-			<p className='bg-rustyred text-white p-2 text-center text-nowrap font-semibold'>
-				{name}
-			</p>
-			<div className='p-6 pr-8 flex justify-between items-center'>
+			<figure>
+				<img
+					src={src}
+					alt={name}
+					className='h-[250px] ml-auto mr-auto p-2 xl:h-[240px]'
+				/>
+				<figcaption className='bg-rustyred text-white p-2 text-center text-nowrap font-semibold'>
+					{name}
+				</figcaption>
+			</figure>
+
+			<footer className='p-4 pr-8 flex justify-between items-center'>
 				<span className='font-medium'>
 					{priceCurrency} {price}
 				</span>
@@ -40,7 +43,7 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 						Add to cart
 					</span>
 				</p>
-			</div>
+			</footer>
 		</article>
 	);
 };
