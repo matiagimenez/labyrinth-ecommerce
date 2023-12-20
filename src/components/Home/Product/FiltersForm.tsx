@@ -96,7 +96,7 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					className={`${inputStyles} cursor-pointer border-r-0 rounded-r-none transition-colors ${
 						category === 'all' &&
 						`bg-rustyred border-rustyred text-white`
-					} w-fit px-4 md:w-[145px] ${removeArrowsStyle}`}
+					} w-fit px-4 md:px-2 md:w-[145px] ${removeArrowsStyle}`}
 					onClick={handleCategoryChange}
 				/>
 				<input

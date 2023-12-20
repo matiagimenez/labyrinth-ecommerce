@@ -3,7 +3,7 @@ import { SubscribeForm } from '.';
 
 export const Footer: FunctionComponent = () => {
 	return (
-		<footer className='pt-12'>
+		<footer className='pt-12 mt-auto'>
 			<SubscribeForm />
 			<hr />
 			<p className='w-full text-center py-[20px] text-sm md:text-base'>
