@@ -23,7 +23,7 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 
 	return (
 		<form action='' className='pl-4'>
-			<fieldset className='inline-block w-[45%] md:w-[20%]'>
+			<fieldset className='inline-block w-[45%] md:w-[300px] xl:w-[20%]'>
 				<label className='mr-2 6 font-light block' htmlFor='filter'>
 					Filter
 				</label>
@@ -38,7 +38,7 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					}
 				/>
 			</fieldset>
-			<fieldset className='mt-4 inline w-[45%] ml-4 md:ml-6 md:w-[20%]'>
+			<fieldset className='mt-4 inline w-[45%] md:w-[400px] ml-4 md:ml-6 2xl:ml-0 2xl:w-[20%]'>
 				<label
 					className='mr-2 6 font-light block md:mt-0'
 					htmlFor='min'
@@ -80,11 +80,8 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					}}
 				/>
 			</fieldset>
-			<fieldset className='inline-block w-[100%] mt-4 md:mt-0 md:ml-6 md:w-[45%]'>
-				<label
-					className='mr-2 6 font-light block md:mt-0'
-					htmlFor='min'
-				>
+			<fieldset className='inline-block w-[100%] mt-4 2xl:mt-0 2xl:ml-0 2xl:w-[45%]'>
+				<label className='mr-2 6 font-light block md:mt-0'>
 					Category
 				</label>
 
@@ -105,7 +102,7 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					className={`${inputStyles} border-rustyred cursor-pointer rounded-none transition-colors ${
 						category === 'notebooks' &&
 						` bg-rustyred border-rustyred text-white`
-					} w-fit px-4 md:w-[145px] ${removeArrowsStyle}`}
+					} w-fit px-3 md:w-[145px] ${removeArrowsStyle}`}
 					onClick={handleCategoryChange}
 				/>
 				<input
@@ -115,7 +112,7 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					className={`${inputStyles} border-rustyred cursor-pointer rounded-none border-l-0 transition-colors ${
 						category === 'gaming' &&
 						`bg-rustyred border-rustyred text-white`
-					} w-fit px-4 md:w-[145px] ${removeArrowsStyle}`}
+					} w-fit px-3 md:w-[145px] ${removeArrowsStyle}`}
 					onClick={handleCategoryChange}
 				/>
 				<input
@@ -125,7 +122,7 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					className={`${inputStyles} border-rustyred cursor-pointer rounded-l-none border-l-0 transition-colors ${
 						category === 'gadgets' &&
 						` bg-rustyred border-rustyred text-white`
-					} w-fit px-4 md:w-[145px] ${removeArrowsStyle}`}
+					} w-fit px-3 md:w-[145px] ${removeArrowsStyle}`}
 					onClick={handleCategoryChange}
 				/>
 			</fieldset>
