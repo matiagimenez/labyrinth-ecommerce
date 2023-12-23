@@ -1,4 +1,4 @@
-import { Product } from './Product';
-import { Image } from './Image';
-import { ShoppingCart } from './ShoppingCartItem';
-export type { Product, ShoppingCart, Image };
+export * from './Product';
+export * from './Image';
+export * from './ShoppingCart';
+export * from './WishList';
