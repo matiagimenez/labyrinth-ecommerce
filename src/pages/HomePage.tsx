@@ -7,7 +7,7 @@ export const HomePage: FunctionComponent = () => {
 	return (
 		<>
 			<section className='overflow-hidden justify-center pb-20 relative flex flex-col items-center md:min-h-fit lg:pt-8 lg:flex-row lg:items-start'>
-				<section className=' inline-block text-center text-4xl order-2 mt-4 lg:w-[40%] lg:order-1 lg:text-left md:text-5xl lg:text-[3.2rem] md:mt-8 2xl:text-7xl md:pr-0 lg:p-28 lg:pr-0 lg:pt-16 lg:pl-6 2xl:pl-0 xl:w-[35%]'>
+				<section className=' inline-block text-center text-4xl order-2 mt-4 lg:w-[40%] lg:order-1 lg:text-left md:text-5xl lg:text-[3.2rem] md:mt-8 2xl:text-[4rem] md:pr-0 lg:p-28 lg:pr-0 lg:pt-12 lg:pl-6 2xl:pl-0 xl:w-[35%]'>
 					<p className='px-4'>
 						The latest and greatest laptop now available for
 						purchase
@@ -25,13 +25,13 @@ export const HomePage: FunctionComponent = () => {
 						</a>
 					</p>
 				</section>
-				<p className='select-none absolute rotate-90 text-cyan -right-36 top-72 hidden font-bold opacity-[50%] -z-10 text-[120px] 2xl:block 2xl:-right-32'>
+				<p className='select-none absolute rotate-90 text-cyan -right-36 top-56 hidden font-bold opacity-[50%] -z-10 text-[120px] 2xl:block 2xl:-right-32'>
 					35% OFF
 				</p>
 				<img
 					src='/images/laptop-homepage.png'
 					alt='Laptop image'
-					className='order-1 mb-8 select-none h-[320px] md:mb-0 inline-block md:h-[400px] md:mt-16 lg:mt-16 lg:h-[420px] xl:mt-8 xl:h-[500px] 2xl:mt-16 2xl:h-[550px]'
+					className='order-1 mb-8 select-none h-[200px] sm:h-[320px] md:mb-0 inline-block md:h-[400px] md:mt-16 lg:h-[420px] xl:mt-8 xl:h-[500px] 2xl:mt-8 2xl:h-[500px]'
 				/>
 			</section>
 			<Carousel images={images} />
