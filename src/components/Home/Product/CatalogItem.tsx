@@ -1,4 +1,4 @@
-import { FunctionComponent, useContext } from 'react';
+import { FunctionComponent, useContext, useEffect } from 'react';
 import { Button, Tooltip } from '../..';
 import { Product } from '../../../types';
 import { PiShoppingCart, PiShoppingCartFill } from 'react-icons/pi';
@@ -20,28 +20,23 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 		useContext(ShoppingCartContext);
 
 	function handleUpdateShoppingCart(product: Product) {
-		if (shoppingCart[product.id]) {
-			const currentAmount = shoppingCart[product.id].amount;
+		const amount = shoppingCart[product.id]
+			? shoppingCart[product.id].amount + 1
+			: 0;
 
-			updateShoppingCart({
-				...shoppingCart,
-				[product.id]: {
-					product,
-					amount: currentAmount + 1,
-				},
-			});
-		} else {
-			updateShoppingCart({
-				...shoppingCart,
-				[product.id]: {
-					product,
-					amount: 0,
-				},
-			});
-		}
-
-		toast.success('Added to the shopping cart');
+		updateShoppingCart({
+			...shoppingCart,
+			[product.id]: {
+				product,
+				amount,
+			},
+		});
+		toast.success('Item added to the cart');
 	}
+
+	useEffect(() => {
+		console.log(shoppingCart);
+	}, [shoppingCart]);
 
 	return (
 		<article className='relative overflow-hidden border-2 rounded-lg w-[100%] ml-auto mr-auto border-rustyred md:w-[95%]'>
