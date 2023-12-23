@@ -1,4 +1,4 @@
-import { FunctionComponent, useContext, useEffect } from 'react';
+import { FunctionComponent, useContext } from 'react';
 import { Button, Tooltip } from '../..';
 import { Product } from '../../../types';
 import { PiShoppingCart, PiShoppingCartFill } from 'react-icons/pi';
@@ -33,10 +33,6 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 		});
 		toast.success('Item added to the cart');
 	}
-
-	useEffect(() => {
-		console.log(shoppingCart);
-	}, [shoppingCart]);
 
 	return (
 		<article className='relative overflow-hidden border-2 rounded-lg w-[100%] ml-auto mr-auto border-rustyred md:w-[95%]'>
