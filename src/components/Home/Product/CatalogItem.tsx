@@ -1,4 +1,4 @@
-import { FunctionComponent, useContext, useEffect } from 'react';
+import { FunctionComponent, useContext } from 'react';
 import { Button, Tooltip } from '../..';
 import { Product } from '../../../types';
 import { PiShoppingCart, PiShoppingCartFill } from 'react-icons/pi';
