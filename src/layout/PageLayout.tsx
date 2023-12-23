@@ -17,7 +17,7 @@ export const PageLayout: FunctionComponent<PageLayoutProps> = ({
 			<Footer />
 			<ToastContainer
 				position='bottom-right'
-				autoClose={5000}
+				autoClose={1500}
 				closeOnClick
 				theme='light'
 				pauseOnHover
@@ -26,12 +26,3 @@ export const PageLayout: FunctionComponent<PageLayoutProps> = ({
 		</>
 	);
 };
-
-//
-// newestOnTop={false}
-// closeOnClick
-// rtl={false}
-// pauseOnFocusLoss
-// draggable
-// pauseOnHover
-// theme="light"

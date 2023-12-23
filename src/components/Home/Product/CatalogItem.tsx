@@ -1,17 +1,51 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useContext, useEffect } from 'react';
 import { Button, Tooltip } from '../..';
 import { Product } from '../../../types';
 import { PiShoppingCart, PiShoppingCartFill } from 'react-icons/pi';
 import { formatPrice } from '../../../utils';
+import { ShoppingCartContext } from '../../../context';
+import { toast } from 'react-toastify';
 
 type CatalogItemProps = {
 	product: Product;
 };
+
 export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 	product,
 }) => {
 	const { id, images, name, category, price, priceCurrency } = product;
 	const src = `/product-images/${id}-${images[0]}`;
+
+	const { shoppingCart, updateShoppingCart } =
+		useContext(ShoppingCartContext);
+
+	function handleUpdateShoppingCart(product: Product) {
+		if (shoppingCart[product.id]) {
+			const currentAmount = shoppingCart[product.id].amount;
+
+			updateShoppingCart({
+				...shoppingCart,
+				[product.id]: {
+					product,
+					amount: currentAmount + 1,
+				},
+			});
+		} else {
+			updateShoppingCart({
+				...shoppingCart,
+				[product.id]: {
+					product,
+					amount: 0,
+				},
+			});
+		}
+
+		toast.success('Added to the shopping cart');
+	}
+
+	useEffect(() => {
+		console.log(shoppingCart);
+	}, [shoppingCart]);
 
 	return (
 		<article className='relative overflow-hidden border-2 rounded-lg w-[100%] ml-auto mr-auto border-rustyred md:w-[95%]'>
@@ -38,7 +72,7 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 						active={<PiShoppingCartFill />}
 						inactive={<PiShoppingCart />}
 						isActive={false}
-						handleClick={() => {}}
+						handleClick={() => handleUpdateShoppingCart(product)}
 					/>
 					<Tooltip
 						text='Add to cart'

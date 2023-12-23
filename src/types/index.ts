@@ -1,3 +1,4 @@
 import { Product } from './Product';
 import { Image } from './Image';
-export type { Product, Image };
+import { ShoppingCart } from './ShoppingCartItem';
+export type { Product, ShoppingCart, Image };
