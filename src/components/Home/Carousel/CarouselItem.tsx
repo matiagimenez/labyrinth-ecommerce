@@ -1,7 +1,5 @@
 import { FunctionComponent } from 'react';
 import { Image } from '../../../types';
-import { VscHeart, VscHeartFilled } from 'react-icons/vsc';
-import { Button, Tooltip } from '../../';
 
 type CarouselItemProps = {
 	image: Image;
@@ -41,18 +39,6 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 						>
 							View details
 						</a>
-						<p className='relative inline-block group top-1 lg:top-2 left-32'>
-							<Button
-								active={<VscHeartFilled />}
-								inactive={<VscHeart />}
-								isActive={false}
-								handleClick={() => {}}
-							/>
-							<Tooltip
-								text='Add to wishlist'
-								position='-right-9 bottom-[38px]'
-							/>
-						</p>
 					</figcaption>
 				</figure>
 			</li>
