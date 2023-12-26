@@ -11,9 +11,9 @@ export const MenuList: FunctionComponent<MenuListProps> = ({
 }) => {
 	return (
 		<section
-			className={`absolute min-h-[600px] 2xl:min-h-[800px]  border-2 w-full min-w-[300px] ${
-				isOpen ? 'top-14 md:top-16' : '-top-[2000px]'
-			} -right-12 md:-right-32 bg-white`}
+			className={`absolute min-h-[500px] border-2 border-cyan-500 border-t-0 border-r-0 w-full min-w-[350px] sm:min-w-[400px] ${
+				isOpen ? '-right-12 md:-right-32' : '-right-[2000px]'
+			} top-14 md:top-16 bg-white flex flex-col justify-between transition-all duration-250 ease-in-out`}
 		>
 			{children}
 		</section>

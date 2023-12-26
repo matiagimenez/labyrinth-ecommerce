@@ -20,6 +20,15 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 		useContext(ShoppingCartContext);
 
 	function handleUpdateShoppingCart(product: Product) {
+		if (
+			!shoppingCart[product.id] &&
+			Object.entries(shoppingCart).length === 4
+		) {
+			return toast.error(
+				'The cart can contain up to 4 different products'
+			);
+		}
+
 		const amount = shoppingCart[product.id]
 			? shoppingCart[product.id].amount + 1
 			: 1;

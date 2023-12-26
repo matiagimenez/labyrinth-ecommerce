@@ -2,9 +2,11 @@ import { FunctionComponent, useContext, useState } from 'react';
 import { ShoppingCartItem, Button, MenuList } from '..';
 import { PiShoppingCart, PiShoppingCartFill } from 'react-icons/pi';
 import { ShoppingCartContext } from '../../../context/ShoppingCartContext';
+import { formatPrice } from '../../../utils';
 
 export const ShoppingCart: FunctionComponent = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	let total: number = 0.0;
 
 	const { shoppingCart, updateShoppingCart } =
 		useContext(ShoppingCartContext);
@@ -33,22 +35,36 @@ export const ShoppingCart: FunctionComponent = () => {
 				}}
 			/>
 			<MenuList isOpen={isOpen}>
-				{Object.keys(shoppingCart).map((key) => {
-					const { product, amount } = shoppingCart[key];
-					return (
-						<ShoppingCartItem
-							key={product.id}
-							product={product}
-							amount={amount}
-							handleRemoveShoppingCartItem={
-								handleRemoveShoppingCartItem
-							}
-							handleUpdateShoppingCartItem={
-								handleUpdateShoppingCartItem
-							}
-						/>
-					);
-				})}
+				{Object.keys(shoppingCart).length > 0 ? (
+					<section>
+						{Object.keys(shoppingCart).map((key) => {
+							const { product, amount } = shoppingCart[key];
+							total += product.price * amount;
+							return (
+								<ShoppingCartItem
+									key={product.id}
+									product={product}
+									amount={amount}
+									handleRemoveShoppingCartItem={
+										handleRemoveShoppingCartItem
+									}
+									handleUpdateShoppingCartItem={
+										handleUpdateShoppingCartItem
+									}
+								/>
+							);
+						})}
+					</section>
+				) : (
+					<p className='py-24 text-center text-lg font-semibold text-rustyred'>
+						The cart is empty
+					</p>
+				)}
+				{
+					<p className='text-center py-2 text-xl font-medium text-green-500'>
+						$ {formatPrice(total)}
+					</p>
+				}
 			</MenuList>
 		</>
 	);

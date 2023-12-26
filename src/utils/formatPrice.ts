@@ -1,4 +1,5 @@
 export function formatPrice(price: number): string {
+	if (price === 0) return '0';
 	let formatedPrice = '';
 	let result: number;
 	let remainder: number = price;
