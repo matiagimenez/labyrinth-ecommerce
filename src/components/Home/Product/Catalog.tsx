@@ -55,7 +55,7 @@ export const Catalog: FunctionComponent = () => {
 			{status === 'success' && (
 				<ResultsMessage amount={products.length} />
 			)}
-			<section className='grid px-6 min-w-[360px] max-w-[400px] w-[80%] ml-auto mr-auto sm:max-w-[100%] sm:w-auto sm:ml-0 grid-cols-1 justify-items-center gap-y-4 gap-x-4 mt-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5'>
+			<section className='grid px-6 min-w-[360px] max-w-[400px] w-[80%] ml-auto mr-auto sm:max-w-[100%] sm:w-auto sm:ml-0 grid-cols-1 justify-items-center gap-y-4 gap-x-4 mt-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
 				{status === 'loading' && (
 					<p className='text-center col-span-5 mt-8 w-auto'>
 						<Loader />
