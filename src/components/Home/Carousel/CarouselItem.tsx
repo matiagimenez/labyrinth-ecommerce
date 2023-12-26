@@ -27,7 +27,7 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 					<img
 						src={src}
 						alt={alt}
-						className='ml-auto mr-auto w-[300px] lg:w-[270px] px-4'
+						className='ml-auto mr-auto w-[270px] px-4'
 					/>
 					<figcaption className='bg-cyan-700 pb-6 border border-cyan-500  rounded-b-xl px-4'>
 						<p className='border-t w-auto pl-2 pt-4 text-lg pb-4 font-medium'>

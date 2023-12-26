@@ -49,8 +49,7 @@ export const Catalog: FunctionComponent = () => {
 	}, [fetchProductsData]);
 
 	return (
-		<section className='mt-8'>
-			<h2 className='opacity-0'>Products</h2>
+		<section className='pt-24' id='Products'>
 			<FiltersForm handleFormChange={handleFormChange} />
 			{status === 'error' && <ResultsMessage amount={0} />}
 			{status === 'success' && (
