@@ -751,7 +751,7 @@ const products = [
 	},
 ];
 
-const DELAY = 300;
+const DELAY = 500;
 
 export const getProducts = (
 	filter: string,
@@ -775,7 +775,7 @@ export const getProducts = (
 
 		if (filter !== '') {
 			filteredProducts = filteredProducts.filter((product: Product) =>
-				product.name.includes(filter)
+				product.name.toLowerCase().includes(filter.toLowerCase())
 			);
 		}
 
