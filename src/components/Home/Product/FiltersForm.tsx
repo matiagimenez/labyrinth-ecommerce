@@ -89,9 +89,9 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					type='button'
 					value='All'
 					name='all'
-					className={`${inputStyles} cursor-pointer border-r-0 border-rustyred rounded-r-none transition-colors ${
+					className={`${inputStyles} cursor-pointer border-x-1 rounded-l-md border-rustyred rounded-r-none transition-colors ${
 						category === 'all' &&
-						` bg-rustyred border-rustyred text-white`
+						`bg-rustyred text-white border-r-1`
 					} w-fit px-4 md:w-[145px] ${removeArrowsStyle}`}
 					onClick={handleCategoryChange}
 				/>
@@ -99,9 +99,8 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					type='button'
 					value='Notebooks'
 					name='notebooks'
-					className={`${inputStyles} border-rustyred cursor-pointer rounded-none transition-colors ${
-						category === 'notebooks' &&
-						` bg-rustyred border-rustyred text-white`
+					className={`${inputStyles} border-rustyred border-x-0 cursor-pointer rounded-none transition-colors ${
+						category === 'notebooks' && `bg-rustyred  text-white`
 					} w-fit px-3 md:w-[145px] ${removeArrowsStyle}`}
 					onClick={handleCategoryChange}
 				/>
@@ -109,9 +108,8 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					type='button'
 					value='Gaming'
 					name='gaming'
-					className={`${inputStyles} border-rustyred cursor-pointer rounded-none border-l-0 transition-colors ${
-						category === 'gaming' &&
-						`bg-rustyred border-rustyred text-white`
+					className={`${inputStyles} border-rustyred border-r-0 cursor-pointer rounded-none transition-colors ${
+						category === 'gaming' && `bg-rustyred text-white`
 					} w-fit px-3 md:w-[145px] ${removeArrowsStyle}`}
 					onClick={handleCategoryChange}
 				/>
@@ -119,9 +117,8 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					type='button'
 					value='Gadgets'
 					name='gadgets'
-					className={`${inputStyles} border-rustyred cursor-pointer rounded-l-none border-l-0 transition-colors ${
-						category === 'gadgets' &&
-						` bg-rustyred border-rustyred text-white`
+					className={`${inputStyles} border-rustyred cursor-pointer rounded-l-none transition-colors ${
+						category === 'gadgets' && ` bg-rustyred text-white`
 					} w-fit px-3 md:w-[145px] ${removeArrowsStyle}`}
 					onClick={handleCategoryChange}
 				/>
