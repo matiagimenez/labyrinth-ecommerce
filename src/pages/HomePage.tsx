@@ -31,7 +31,7 @@ export const HomePage: FunctionComponent = () => {
 				<img
 					src='/images/laptop-homepage.png'
 					alt='Laptop image'
-					className='order-1 mb-8 select-none h-[200px] sm:h-[320px] md:mb-0 inline-block md:h-[400px] md:mt-16 lg:h-[420px] xl:mt-8 xl:h-[500px] 2xl:mt-8 2xl:h-[500px]'
+					className='order-1 mb-8 select-none h-[200px] sm:h-[320px] md:mb-0 inline-block md:h-[350px] md:mt-8 lg:h-[420px] xl:mt-8 xl:h-[500px] 2xl:mt-8 2xl:h-[500px]'
 				/>
 			</section>
 			<Carousel images={images} />
