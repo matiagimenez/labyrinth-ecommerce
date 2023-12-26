@@ -22,7 +22,7 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 	function handleUpdateShoppingCart(product: Product) {
 		const amount = shoppingCart[product.id]
 			? shoppingCart[product.id].amount + 1
-			: 0;
+			: 1;
 
 		updateShoppingCart({
 			...shoppingCart,
