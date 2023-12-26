@@ -38,7 +38,7 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					}
 				/>
 			</fieldset>
-			<fieldset className='mt-4 inline w-[45%] md:w-[400px] ml-4 md:ml-6 2xl:ml-0 2xl:w-[20%]'>
+			<fieldset className='mt-4 inline w-[45%] md:w-[400px] ml-4 md:ml-6 2xl:w-[20%]'>
 				<label
 					className='mr-2 6 font-light block md:mt-0'
 					htmlFor='min'
@@ -50,7 +50,7 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					name='minPrice'
 					id='min'
 					placeholder='$ Min'
-					className={`${inputStyles} w-[45%] md:w-[145px] mr-2 ${removeArrowsStyle}`}
+					className={`${inputStyles} w-[45%] md:w-[145px] mr-0.5 ${removeArrowsStyle}`}
 					onChange={(event) => {
 						if (!event.target.value) {
 							handleFormChange(event.target.name, 0);
@@ -80,7 +80,7 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					}}
 				/>
 			</fieldset>
-			<fieldset className='inline-block w-[100%] mt-4 2xl:mt-0 2xl:ml-0 2xl:w-[45%]'>
+			<fieldset className='inline-block w-[100%] mt-4 2xl:mt-0 2xl:ml-6 2xl:w-[45%]'>
 				<label className='mr-2 6 font-light block md:mt-0'>
 					Category
 				</label>
