@@ -50,7 +50,7 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 
 	return (
 		<article className='relative overflow-hidden border-2 rounded-lg w-[100%] ml-auto mr-auto border-rustyred md:w-[95%]'>
-			<span className='absolute top-2 right-2 bg-brightpink text-cyan-900 py-1 px-2 rounded-xl text-[11px] font-medium'>
+			<span className='absolute top-2 right-2 bg-brightpink text-cyan-900 py-1 px-2 rounded-xl text-[11px] font-medium z-10'>
 				{category.toUpperCase()}
 			</span>
 			<figure className='relative'>
