@@ -42,9 +42,9 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
 
 	return (
 		<section className='md:mt-24'>
-			<h2 className='text-black text-2xl px-5 py-8 pb-4 pt-16 md:pt-32 font-medium'>
+			<h2 className='text-black text-xl sm:text-2xl px-4 py-8 pb-4 pt-16 md:pt-32 font-medium'>
 				Explore our{' '}
-				<span className='pb-2 inline-block px-1 font-bold text-rustyred animate-pulse duration-1000 text-3xl'>
+				<span className='pb-2 inline-block px-1 font-bold text-rustyred animate-pulse duration-1000 text-2xl sm:text-3xl'>
 					latest products
 				</span>
 				<span className='block font-light'>

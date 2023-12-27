@@ -54,7 +54,7 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 			</span>
 			<figure className='relative'>
 				<Link to={`/product/${id}`}>
-					<p className={stock !== 0 ? 'group' : undefined}>
+					<p className={stock !== 0 ? 'group' : 'group'}>
 						<img
 							src={`/product-images/${id}-${images[0]}`}
 							alt={name}
@@ -68,15 +68,13 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 					</p>
 
 					<figcaption
-						className={`${
-							stock > 0 ? 'bg-rustyred' : 'bg-gray-500'
-						} text-white p-2 text-center text-nowrap font-semibold hover:underline underline-offset-2`}
+						className={`bg-rustyred text-white p-2 text-center text-nowrap font-semibold hover:underline underline-offset-2`}
 					>
 						{name}
 					</figcaption>
 				</Link>
 				{stock === 0 && (
-					<p className='absolute bg-gray-500 w-full top-[50%] py-4 text-center text-white font-semibold'>
+					<p className='absolute bg-brightpink border-1 w-full top-[50%] py-2 text-center text-white font-medium'>
 						No stock available
 					</p>
 				)}
