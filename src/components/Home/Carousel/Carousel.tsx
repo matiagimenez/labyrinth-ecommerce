@@ -44,7 +44,7 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
 		<section className='md:mt-24'>
 			<h2 className='text-black text-2xl px-5 py-8 pb-4 pt-16 md:pt-32 font-medium'>
 				Explore our{' '}
-				<span className='pb-2 inline-block px-1 font-bold text-rustyred animate-bounce duration-1000 text-3xl'>
+				<span className='pb-2 inline-block px-1 font-bold text-rustyred animate-pulse duration-1000 text-3xl'>
 					latest products
 				</span>
 				<span className='block font-light'>
