@@ -20,7 +20,18 @@ export const ShoppingCart: FunctionComponent = () => {
 	function handleUpdateShoppingCartItem(id: string, amount: number) {
 		const nextShoppingCart = { ...shoppingCart };
 		nextShoppingCart[id].amount += amount;
-		if (nextShoppingCart[id].amount === 0) delete nextShoppingCart[id];
+
+		if (nextShoppingCart[id].amount === 0) {
+			delete nextShoppingCart[id];
+		}
+
+		if (
+			amount > 0 &&
+			nextShoppingCart[id].product.stock < nextShoppingCart[id].amount
+		) {
+			nextShoppingCart[id].amount = nextShoppingCart[id].product.stock;
+		}
+
 		updateShoppingCart(nextShoppingCart);
 	}
 

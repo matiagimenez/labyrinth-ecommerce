@@ -6,4 +6,4 @@ export * from './ShoppingCart/ShoppingCart';
 export * from './ProductDescription';
 export * from './ShoppingCart/ShoppingCartItem';
 export * from './Logo';
-export * from './MenuList';
+export * from './ProductList';

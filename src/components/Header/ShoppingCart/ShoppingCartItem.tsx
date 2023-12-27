@@ -17,7 +17,7 @@ export const ShoppingCartItem: FunctionComponent<ShoppingCartItemProps> = ({
 	handleUpdateShoppingCartItem,
 }) => {
 	return (
-		<article className='p-3 py-1 relative border-b-2 border-cyan'>
+		<article className='p-3 py-1 relative border-b-2 border-cyan-500'>
 			<ProductDescription product={product} amount={amount} />
 			<div className='mr-4 items-baseline flex justify-between'>
 				<p>
