@@ -15,7 +15,7 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 	const { src, alt, href, id } = image;
 
 	const styles: string = `
-		rounded-xl pt-6 border md:min-w-[180px] md:max-w-[180px] xl:min-w-[220px] xl:max-w-[222px] 
+		rounded-xl pt-6 border-2 md:min-w-[180px] md:max-w-[180px] xl:min-w-[220px] xl:max-w-[222px] 
 	`;
 
 	if (id === current) {
