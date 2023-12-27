@@ -44,6 +44,7 @@ export const ShoppingCart: FunctionComponent = () => {
 				handleClick={() => {
 					setIsOpen(!isOpen);
 				}}
+				notificationEnabled={Object.keys(shoppingCart).length > 0}
 			/>
 			<MenuList isOpen={isOpen}>
 				{Object.keys(shoppingCart).length > 0 ? (
