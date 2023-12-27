@@ -23,9 +23,13 @@ function App() {
 			element: <HomePage />,
 		},
 		{
-			path: '/product/:id',
+			path: '/product/:productId',
 			element: <ProductPage />,
 			errorElement: <ErrorPage />,
+		},
+		{
+			path: '/error',
+			element: <ErrorPage />,
 		},
 		{
 			path: '/*',
