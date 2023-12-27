@@ -5,6 +5,7 @@ import { PiShoppingCart, PiShoppingCartFill } from 'react-icons/pi';
 import { formatPrice } from '../../../utils';
 import { ShoppingCartContext } from '../../../context';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 type CatalogItemProps = {
 	product: Product;
@@ -49,14 +50,16 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 				{category.toUpperCase()}
 			</span>
 			<figure>
-				<img
-					src={src}
-					alt={name}
-					className='h-[250px] ml-auto mr-auto p-2 xl:h-[240px]'
-				/>
-				<figcaption className='bg-rustyred text-white p-2 text-center text-nowrap font-semibold'>
-					{name}
-				</figcaption>
+				<Link to={`/product/${id}`}>
+					<img
+						src={src}
+						alt={name}
+						className='h-[250px] ml-auto mr-auto p-2 xl:h-[240px]'
+					/>
+					<figcaption className='bg-rustyred text-white p-2 text-center text-nowrap font-semibold hover:underline underline-offset-2'>
+						{name}
+					</figcaption>
+				</Link>
 			</figure>
 
 			<footer className='p-4 pr-8 flex justify-between items-center'>

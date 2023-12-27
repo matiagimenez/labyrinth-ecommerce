@@ -63,12 +63,6 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 				<p className='py-2 opacity-30 p-2 text-sm xl:text-base pb-4 font-medium text-center'>
 					{alt}
 				</p>
-				<a
-					href={href}
-					className='bg-rustyred hidden text-white py-2 w-[90px] rounded ml-auto mr-auto text-xs text-center hover:opacity-90'
-				>
-					See detail
-				</a>
 			</section>
 		</li>
 	);
