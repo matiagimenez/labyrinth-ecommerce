@@ -15,7 +15,6 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 	product,
 }) => {
 	const { id, images, name, category, price, priceCurrency, stock } = product;
-	const src = `/product-images/${id}-${images[0]}`;
 
 	const { shoppingCart, updateShoppingCart } =
 		useContext(ShoppingCartContext);
@@ -55,11 +54,19 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 			</span>
 			<figure className='relative'>
 				<Link to={`/product/${id}`}>
-					<img
-						src={src}
-						alt={name}
-						className='h-[250px] ml-auto mr-auto p-2 xl:h-[240px]'
-					/>
+					<p className={stock !== 0 ? 'group' : undefined}>
+						<img
+							src={`/product-images/${id}-${images[0]}`}
+							alt={name}
+							className='h-[250px] ml-auto mr-auto p-2 xl:h-[240px] group-hover:hidden'
+						/>
+						<img
+							src={`/product-images/${id}-${images[1]}`}
+							alt={name}
+							className='h-[250px] hidden ml-auto mr-auto p-2 xl:h-[240px] group-hover:block'
+						/>
+					</p>
+
 					<figcaption
 						className={`${
 							stock > 0 ? 'bg-rustyred' : 'bg-gray-500'
