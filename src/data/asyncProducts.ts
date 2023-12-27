@@ -32,77 +32,93 @@ const products = [
 		features: {
 			cpu: {
 				title: 'Processor',
-				text: `Intel Core i7 12700H
-			4.7 GHz Performance 6-Core
-			3.5 GHz Efficiency 8-Core
-			Cores: 14
-			Threads: 20`,
+				text: [
+					'Intel Core i7 12700H',
+					'4.7 GHz Performance 6-Core',
+					'3.5 GHz Efficiency 8-Core',
+					'Cores: 14',
+					'Threads: 20',
+				],
 			},
 			ram: {
 				title: 'Memory',
-				text: `Capacity: 32GB
-			Type: DDR5
-			Expandable: 64GB`,
+				text: ['Capacity: 32GB', 'Type: DDR5', 'Expandable: 64GB'],
 			},
 			screen: {
 				title: 'Display',
-				text: `Size: 15.6″
-			Resolution: QHD 2560×1440
-			Technology: WVA G-Sync
-			Hz: 240Hz`,
+				text: [
+					'Size: 15.6″',
+					'Resolution: QHD 2560×1440',
+					'Technology: WVA G-Sync',
+					'Hz: 240Hz',
+				],
 			},
 			gpu: {
 				title: 'Graphics',
-				text: `NVIDIA GeForce RTX 3070 Ti
-			Video Memory: 8 GB GDDR6
-			Switch MUX`,
+				text: [
+					'NVIDIA GeForce RTX 3070 Ti',
+					'Video Memory: 8 GB GDDR6',
+					'Switch MUX',
+				],
 			},
 			storage: {
 				title: 'Storage',
-				text: `Capacity: 512 GB
-			Type: SSD
-			Technology: PCIe 4.0 NVMe`,
+				text: [
+					'Capacity: 512 GB',
+					'Type: SSD',
+					'Technology: PCIe 4.0 NVMe',
+				],
 			},
 			connectivity: {
 				title: 'Connectivity',
-				text: `WiFi 6 802.11AX
-			Bluetooth: Yes
-			Ethernet: Yes 2500 Mbit/s`,
+				text: [
+					'WiFi 6 802.11AX',
+					'Bluetooth: Yes',
+					'Ethernet: Yes 2500 Mbit/s',
+				],
 			},
 			os: {
 				title: 'Operating System',
-				text: 'Windows 11',
+				text: ['Windows 11'],
 			},
 			ports: {
 				title: 'Ports',
-				text: `- 3 x USB Type-A 3.2 Gen 1
-			- Type-C port (Thunderbolt™ 4, USB 3.2 Gen 2, DP 1.4,PD)
-			- HDMI 2.1
-			- RJ-45 Killer E3100 2.5Gbps
-			- Headset jack`,
+				text: [
+					'3 x USB Type-A 3.2 Gen 1',
+					'Type-C port (Thunderbolt™ 4, USB 3.2 Gen 2, DP 1.4,PD)',
+					'HDMI 2.1',
+					'RJ-45 Killer E3100 2.5Gbps',
+					'Headset jack',
+				],
 			},
 			other: {
 				title: 'Other features',
-				text: `720p Webcam
-			RGB Backlit Keyboard
-			AlienFX Lighting
-			Cryo-tech`,
+				text: [
+					'720p Webcam',
+					'RGB Backlit Keyboard',
+					'AlienFX Lighting',
+					'Cryo-tech',
+				],
 			},
 			model: {
 				title: 'Model',
-				text: `Brand: Alienware
-			Line: m15 R7
-			Model: AWM15R7-7730BLK-PUS`,
+				text: [
+					'Brand: Alienware',
+					'Line: m15 R7',
+					'Model: AWM15R7-7730BLK-PUS',
+				],
 			},
 			dimensions: {
-				title: 'Dimensions and weight',
-				text: `35.6 x 27,2 x 2,39 cm
-			Weight: 2,42 kg
-			Chassis: Plastic`,
+				title: 'Dimensions',
+				text: [
+					'35.6 x 27,2 x 2,39 cm',
+					'Weight: 2,42 kg',
+					'Chassis: Plastic',
+				],
 			},
 			usage: {
 				title: 'Recommended use',
-				text: 'Design, architecture, photo editing, Rendering, Multimedia, internet, Gaming',
+				text: ['Design', 'Architecture', 'Photo editing', 'Gaming'],
 			},
 		},
 	},
@@ -165,8 +181,7 @@ const products = [
 			},
 			os: {
 				title: 'Operating System',
-				text: `macOS
-				Version: Ventura`,
+				text: `macOS Version: Ventura`,
 			},
 			ports: {
 				title: 'Ports',
@@ -192,7 +207,7 @@ const products = [
 			Model: MNW83LL/A`,
 			},
 			dimensions: {
-				title: 'Dimensions and weight',
+				title: 'Dimensions',
 				text: `35,6 x 24,8 x 1,7 cm
 			Weight: 2,15 kg
 			Chassis: Aluminio`,
@@ -296,7 +311,7 @@ const products = [
 			Model: 12UGK-256`,
 			},
 			dimensions: {
-				title: 'Dimensions and weight',
+				title: 'Dimensions',
 				text: `39.82 x 27.33 x 2.41 cm
 			Weight: 2.79 kg
 			Chassis: Plastic`,
@@ -400,7 +415,7 @@ const products = [
 			Model: 82K201XCUS`,
 			},
 			dimensions: {
-				title: 'Dimensions and weight',
+				title: 'Dimensions',
 				text: `35.96 x 25.19 x 2.41 cm
 			Weight: 2.25 kg
 			Chassis: Plastic`,
@@ -498,7 +513,7 @@ const products = [
 			Model: K3400PA-WH55`,
 			},
 			dimensions: {
-				title: 'Dimensions and weight',
+				title: 'Dimensions',
 				text: `31.8 x 22.9 x 1.9 cm
 			Weight: 1.40 kg
 			Chassis: Aluminum and plastic`,
@@ -602,7 +617,7 @@ const products = [
 			Model: Q508UG-212.R7TBL`,
 			},
 			dimensions: {
-				title: 'Dimensions and weight',
+				title: 'Dimensions',
 				text: `35.78 x 23.0 x 1.99 cm
 			Weight: 1.99 kg
 			Chassis: Aluminum/Plastic`,
@@ -702,7 +717,7 @@ const products = [
 			Model: 82KT00GVUS`,
 			},
 			dimensions: {
-				title: 'Dimensions and weight',
+				title: 'Dimensions',
 				text: `32.4 x 21.5 x 1.9 cm
 			Weight: 1.45 kg
 			Chassis: Plastic`,
@@ -725,6 +740,7 @@ const products = [
 		enabled: true,
 		images: ['01.jpg', '02.jpg', '03.jpg', '04.jpg'],
 		banner: 'banner.jpg',
+		features: null,
 		description: ` Immerse yourself completely in books wherever and whenever you want. The Kindle Paperwhite is thin, light, and easy to carry so you can enjoy your favorite books anytime. Thanks to our 300 ppi glare-free Paperwhite display, now with 10% more brightness at maximum brightness, you can read under any light. Plus, now a single USB-C charge lasts up to 10 weeks. The Kindle Paperwhite is waterproof, so you can use it confidently in even more places, whether you're at the beach or in the bathtub. With IPX8 certification, the Kindle Paperwhite withstands accidental immersion in fresh water up to a depth of 2 meters for up to 60 minutes and in saltwater up to 0.25 meters for up to 3 minutes. Now you can adjust the screen tone of your Kindle Paperwhite and choose from a white light to a warm amber light, or schedule when it changes from one tone to another for a personalized reading experience. You can also adjust the font size and thickness to your preference.
   `,
 	},
@@ -745,6 +761,7 @@ const products = [
 			'04-600x600.webp',
 			'05-600x600.webp',
 		],
+		features: null,
 		banner: 'banner-oculus-quest.webp.jpg',
 		description: `M2 Pro is a head strap with a battery specially designed by BOBOVR for the Oculus Quest 2. The BOBOVR design team optimized many details based on the original M2, enhancing overall comfort and practicality of the head strap. 
 		The redesigned shape at the back of the head provides a larger contact area, improving overall fit and comfort.`,
