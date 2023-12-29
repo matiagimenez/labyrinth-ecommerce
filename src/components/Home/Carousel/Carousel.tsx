@@ -42,7 +42,7 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
 
 	return (
 		<section className='md:mt-24'>
-			<h2 className='text-gray-800 text-2xl sm:text-3xl lg:text-4xl w-[95%] pt-14 md:pt-0 text-center pb-2 font-bold'>
+			<h2 className='text-gray-800 text-2xl sm:text-3xl lg:text-4xl w-[95%] pt-14 md:pt-0 text-center pb-2 mr-auto ml-auto font-bold'>
 				Explore our{' '}
 				<span className='inline-block font-bold text-rustyred'>
 					latest products
@@ -53,7 +53,7 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
 			</h2>
 			<ul
 				{...handlers}
-				className='flex w-full items-center justify-center mt-2 pb-6  gap-4 min-h-[400px] md:gap-6 xl:gap-4'
+				className='flex w-full items-center justify-center mt-2 pb-6 gap-4 min-h-[400px] md:gap-6 xl:gap-4'
 			>
 				{images.map((image: Image) => {
 					return (
