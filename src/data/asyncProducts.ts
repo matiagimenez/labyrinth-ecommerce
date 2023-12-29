@@ -149,72 +149,85 @@ const products = [
 		features: {
 			cpu: {
 				title: 'Processor',
-				text: `Apple M2 PRO
-				Cores: 12`,
+				text: ['Apple M2 PRO', 'Cores: 12'],
 			},
 			ram: {
 				title: 'Memory',
-				text: `Capacity: 16GB`,
+				text: ['Capacity: 16GB'],
 			},
 			screen: {
 				title: 'Display',
-				text: `Size: 16.2″
-				Resolution: XDR 3456 x 2234 px
-				Technology:  Mini-LED
-				Hz: Apple ProMotion 120hz`,
+				text: [
+					'Size: 16.2″',
+					'Resolution: XDR 3456 x 2234 px',
+					'Technology: Mini-LED',
+					'Hz: Apple ProMotion 120hz',
+				],
 			},
 			gpu: {
 				title: 'Graphics',
-				text: `APPLE Chip 19 Nucleos
-				Neural Engine de 16 Nucleos`,
+				text: ['APPLE Chip 19 cores', '16 cores Neural Engine'],
 			},
 			storage: {
 				title: 'Storage',
-				text: `Capacity: 512 GB
-			Technology: Apple NVMe`,
+				text: ['Capacity: 512 GB', 'Technology: Apple NVMe'],
 			},
 			connectivity: {
 				title: 'Connectivity',
-				text: `WiFi 6E 802.11ax
-				Bluetooth: 5.3
-			Ethernet: No`,
+				text: ['WiFi 6E 802.11ax', 'Bluetooth: 5.3', 'Ethernet: No'],
 			},
 			os: {
 				title: 'Operating System',
-				text: `macOS Version: Ventura`,
+				text: ['macOS Version: Ventura'],
 			},
 			ports: {
 				title: 'Ports',
-				text: `3 x Thunderbolt 4 (DP/HDMI/DVI and 100 W Power Delivery)
-				Audio Combo
-				Card Reader
-				Magsafe
-				HDMI`,
+				text: [
+					'3 x Thunderbolt 4 (DP/HDMI/DVI and 100 W Power Delivery)',
+					'Audio Combo',
+					'Card Reader',
+					'Magsafe',
+					'HDMI',
+				],
 			},
 			other: {
 				title: 'Other features',
-				text: `Backlit Keyboard
-				Force Touch Trackpad
-				1080p Webcam
-				Fingerprint Reader
-				Card Reader
-				6 Speakers`,
+				text: [
+					'Backlit Keyboard',
+					'Force Touch Trackpad',
+					'1080p Webcam',
+					'Fingerprint Reader',
+					'Card Reader',
+					'6 Speakers',
+				],
 			},
 			model: {
 				title: 'Model',
-				text: `Brand: Apple
-			Line: MacBook Pro 16
-			Model: MNW83LL/A`,
+				text: [
+					'Brand: Apple',
+					'Line: MacBook Pro 16',
+					'Model: MNW83LL/A',
+				],
 			},
 			dimensions: {
 				title: 'Dimensions',
-				text: `35,6 x 24,8 x 1,7 cm
-			Weight: 2,15 kg
-			Chassis: Aluminio`,
+				text: [
+					'35,6 x 24,8 x 1,7 cm',
+					'Weight: 2,15 kg',
+					'Chassis: Aluminio',
+				],
 			},
 			usage: {
 				title: 'Recommended use',
-				text: 'Design, Photography, Office tasks, Programming, Video Editing, Architecture, Rendering',
+				text: [
+					'Design',
+					'Photography',
+					'Office tasks',
+					'Programming',
+					'Video Editing',
+					'Architecture',
+					'Rendering',
+				],
 			},
 		},
 	},
@@ -248,77 +261,88 @@ const products = [
 		features: {
 			cpu: {
 				title: 'Processor',
-				text: `Intel® Core i7 12700H
-			Speed: 2.30 GHz - 4.60 GHz
-			Cores: 14 (Performance 6, Efficient 8)
-			Threads: 20`,
+				text: [
+					'Intel® Core i7 12700H',
+					'Speed: 2.30 GHz - 4.60 GHz',
+					'Cores: 14 (Performance 6, Efficient 8)',
+					'Threads: 20',
+				],
 			},
 			ram: {
 				title: 'Memory',
-				text: `Capacity: 16GB
-			Type: DDR4
-			Expandable: 64GB`,
+				text: ['Capacity: 16GB', 'Type: DDR4', 'Expandable: 64GB'],
 			},
 			screen: {
 				title: 'Display',
-				text: `Size: 17.3"
-			Resolution: Full HD
-			Technology: IPS
-			Hz: 144Hz`,
+				text: [
+					'Size: 17.3"',
+					'Resolution: Full HD',
+					'Technology: IPS',
+					'Hz: 144Hz',
+				],
 			},
 			gpu: {
 				title: 'Graphics',
-				text: `NVIDIA GeForce RTX 3070
-			Video Memory: 8 GB GDDR6`,
+				text: ['NVIDIA GeForce RTX 3070', 'Video Memory: 8 GB GDDR6'],
 			},
 			storage: {
 				title: 'Storage',
-				text: `Capacity: 512 GB
-			Type: SSD
-			Technology: PCIe 4.0 NVMe
-			Additional NVMe Slot`,
+				text: [
+					'Capacity: 512 GB',
+					'Type: SSD',
+					'Technology: PCIe 4.0 NVMe',
+					'Additional NVMe Slot',
+				],
 			},
 			connectivity: {
 				title: 'Connectivity',
-				text: `Intel Wi-Fi 6 AX201
-			Bluetooth 5.2
-			Ethernet: Yes`,
+				text: ['Intel Wi-Fi 6 AX201', 'Bluetooth 5.2', 'Ethernet: Yes'],
 			},
 			os: {
 				title: 'Operating System',
-				text: `Windows 11
-			Version: Home 64 bits`,
+				text: ['Windows 11', 'Version: Home 64 bits'],
 			},
 			ports: {
 				title: 'Ports',
-				text: `2 x USB 3.2 Gen1
-			USB 2.0
-			USB 3.2 Gen1
-			HDMI (4K @ 60Hz)
-			Headphone/Microphone`,
+				text: [
+					'2 x USB 3.2 Gen1',
+					'USB 2.0',
+					'USB 3.2 Gen1',
+					'HDMI (4K @ 60Hz)',
+					'Headphone/Microphone',
+				],
 			},
 			other: {
 				title: 'Other features',
-				text: `RGB Backlit Keyboard
-			720p Webcam
-			Nahimic 3 / Hi-Res Audio
-			Cooler Boost 5`,
+				text: [
+					'RGB Backlit Keyboard',
+					'720p Webcam',
+					'Nahimic 3 / Hi-Res Audio',
+					'Cooler Boost 5',
+				],
 			},
 			model: {
 				title: 'Model',
-				text: `Brand: MSI
-			Line: GL Series
-			Model: 12UGK-256`,
+				text: ['Brand: MSI', 'Line: GL Series', 'Model: 12UGK-256'],
 			},
 			dimensions: {
 				title: 'Dimensions',
-				text: `39.82 x 27.33 x 2.41 cm
-			Weight: 2.79 kg
-			Chassis: Plastic`,
+				text: [
+					'39.82 x 27.33 x 2.41 cm',
+					'Weight: 2.79 kg',
+					'Chassis: Plastic',
+				],
 			},
 			usage: {
 				title: 'Recommended use',
-				text: 'Gaming, 3D Modeling, Renders, Architecture, Animation, Video Editing',
+				text: [
+					'Gaming',
+					'3D Modeling',
+					'Renders',
+					'Architecture',
+					'Animation',
+					'Video Editing',
+				],
 			},
 		},
 	},
@@ -352,77 +376,92 @@ const products = [
 		features: {
 			cpu: {
 				title: 'Processor',
-				text: `AMD Ryzen 5 5600H
-			Speed: 3.30 GHz - 4.20 GHz
-			Cores: 6
-			Threads: 12`,
+				text: [
+					'AMD Ryzen 5 5600H',
+					'Speed: 3.30 GHz - 4.20 GHz',
+					'Cores: 6',
+					'Threads: 12',
+				],
 			},
 			ram: {
 				title: 'Memory',
-				text: `Capacity: 8GB
-			Type: DDR4
-			Expandable: 64GB`,
+				text: ['Capacity: 8GB', 'Type: DDR4', 'Expandable: 64GB'],
 			},
 			screen: {
 				title: 'Display',
-				text: `Size: 15.6"
-			Resolution: FULL HD
-			Technology: IPS
-			Hz: 120`,
+				text: [
+					'Size: 15.6"',
+					'Resolution: FULL HD',
+					'Technology: IPS',
+					'Hz: 120',
+				],
 			},
 			gpu: {
 				title: 'Graphics',
-				text: `NVIDIA GeForce RTX 3050 Ti
-			Video Memory: 4GB GDDR6`,
+				text: ['NVIDIA GeForce RTX 3050 Ti', 'Video Memory: 4GB GDDR6'],
 			},
 			storage: {
 				title: 'Storage',
-				text: `Capacity: 256 GB
-			Type: SSD
-			Technology: PCIe 3.0 NVMe
-			Additional M.2 Slot`,
+				text: [
+					'Capacity: 256 GB',
+					'Type: SSD',
+					'Technology: PCIe 3.0 NVMe',
+					'Additional M.2 Slot',
+				],
 			},
 			connectivity: {
 				title: 'Connectivity',
-				text: `WiFi 6 ( 802.11 ax)
-			Bluetooth®
-			Ethernet: Yes`,
+				text: ['WiFi 6 (802.11 ax)', 'Bluetooth®', 'Ethernet: Yes'],
 			},
 			os: {
 				title: 'Operating System',
-				text: `Windows 11
-			Version: Home 64 Bits`,
+				text: ['Windows 11', 'Version: Home 64 Bits'],
 			},
 			ports: {
 				title: 'Ports',
-				text: `USB-C® 3.2 Gen 1
-			2x USB 3.2 Gen 1
-			HDMI 2.0
-			RJ-45
-			Headphone / microphone`,
+				text: [
+					'USB-C® 3.2 Gen 1',
+					'2x USB 3.2 Gen 1',
+					'HDMI 2.0',
+					'RJ-45',
+					'Headphone / microphone',
+				],
 			},
 			other: {
 				title: 'Other features',
-				text: `Backlit Keyboard
-			720p Webcam
-			Numeric Pad
-			Nahimic Audio`,
+				text: [
+					'Backlit Keyboard',
+					'720p Webcam',
+					'Numeric Pad',
+					'Nahimic Audio',
+				],
 			},
 			model: {
 				title: 'Model',
-				text: `Brand: Lenovo
-			Line: IdeaPad Gaming 3
-			Model: 82K201XCUS`,
+				text: [
+					'Brand: Lenovo',
+					'Line: IdeaPad Gaming 3',
+					'Model: 82K201XCUS',
+				],
 			},
 			dimensions: {
 				title: 'Dimensions',
-				text: `35.96 x 25.19 x 2.41 cm
-			Weight: 2.25 kg
-			Chassis: Plastic`,
+				text: [
+					'35.96 x 25.19 x 2.41 cm',
+					'Weight: 2.25 kg',
+					'Chassis: Plastic',
+				],
 			},
 			usage: {
 				title: 'Recommended use',
-				text: 'Office tasks, Multimedia, Internet, Gaming, Design, Programming',
+				text: [
+					'Office tasks',
+					'Multimedia',
+					'Internet',
+					'Gaming',
+					'Design',
+					'Programming',
+				],
 			},
 		},
 	},
@@ -450,77 +489,91 @@ const products = [
 			'07-600x600.jpg',
 		],
 		banner: 'banner-vivobook.jpg',
-		description: '',
+		description:
+			"It's time to showcase your new and vibrant vision to the world! The Vivobook Pro 14 OLED allows you to express your true colors with its vivid and stunning 14-inch NanoEdge 2.8K OLED1 display and impressive Harman Kardon-certified audio. The Vivobook Pro 14 OLED immerses you in whatever you're doing, whether it's work or play",
 		features: {
 			cpu: {
 				title: 'Processor',
-				text: `Intel® Core i5 11300H
-			Speed: 3.10 GHz - 4.40 GHz
-			Cores: 4
-			Threads: 8`,
+				text: [
+					'Intel® Core i5 11300H',
+					'Speed: 3.10 GHz - 4.40 GHz',
+					'Cores: 4',
+					'Threads: 8',
+				],
 			},
 			ram: {
 				title: 'Memory',
-				text: `Capacity: 8GB
-			Type: DDR4`,
+				text: ['Capacity: 8GB', 'Type: DDR4'],
 			},
 			screen: {
 				title: 'Display',
-				text: `Size: 14″
-			Resolution: WQXGA+ 2880×1800
-			Technology: OLED 100% DCI-P3
-			Hz: 90`,
+				text: [
+					'Size: 14″',
+					'Resolution: WQXGA+ 2880×1800',
+					'Technology: OLED 100% DCI-P3',
+					'Hz: 90',
+				],
 			},
 			gpu: {
 				title: 'Graphics',
-				text: 'Intel Iris Xe Graphics',
+				text: ['Intel Iris Xe Graphics'],
 			},
 			storage: {
 				title: 'Storage',
-				text: `Capacity: 256 GB
-			Type: SSD
-			Technology: PCIe 3.0 NVMe`,
+				text: [
+					'Capacity: 256 GB',
+					'Type: SSD',
+					'Technology: PCIe 3.0 NVMe',
+				],
 			},
 			connectivity: {
 				title: 'Connectivity',
-				text: `WiFi 6 802.11ax
-			Bluetooth 5.0
-			Ethernet: No`,
+				text: ['WiFi 6 802.11ax', 'Bluetooth 5.0', 'Ethernet: No'],
 			},
 			os: {
 				title: 'Operating System',
-				text: `Windows 11
-			Version: Home 64 Bits`,
+				text: ['Windows 11', 'Version: Home 64 Bits'],
 			},
 			ports: {
 				title: 'Ports',
-				text: `2x USB 2.0 Type-A
-			USB 3.2 Gen 1 Type-A
-			Thunderbolt™ 4 DP/PD
-			HDMI
-			3.5mm Combo Audio Jack`,
+				text: [
+					'2x USB 2.0 Type-A',
+					'USB 3.2 Gen 1 Type-A',
+					'Thunderbolt™ 4 DP/PD',
+					'HDMI',
+					'3.5mm Combo Audio Jack',
+				],
 			},
 			other: {
 				title: 'Other features',
-				text: `720p Webcam
-			Card Reader
-			Backlit Keyboard`,
+				text: ['720p Webcam', 'Card Reader', 'Backlit Keyboard'],
 			},
 			model: {
 				title: 'Model',
-				text: `Brand: Asus
-			Line: VivoBook 14 PRO
-			Model: K3400PA-WH55`,
+				text: [
+					'Brand: Asus',
+					'Line: VivoBook 14 PRO',
+					'Model: K3400PA-WH55',
+				],
 			},
 			dimensions: {
 				title: 'Dimensions',
-				text: `31.8 x 22.9 x 1.9 cm
-			Weight: 1.40 kg
-			Chassis: Aluminum and plastic`,
+				text: [
+					'31.8 x 22.9 x 1.9 cm',
+					'Weight: 1.40 kg',
+					'Chassis: Aluminum and plastic',
+				],
 			},
 			usage: {
 				title: 'Recommended use',
-				text: 'Office tasks, Multimedia, Internet, Design, Programming, Photography',
+				text: [
+					'Office tasks',
+					'Multimedia',
+					'Internet',
+					'Design',
+					'Programming',
+					'Photography',
+				],
 			},
 		},
 	},
@@ -555,76 +608,95 @@ const products = [
 		features: {
 			cpu: {
 				title: 'Processor',
-				text: `AMD® Ryzen 7 5700U
-			Speed: 1.80 GHz - 4.30 GHz
-			Cores: 8
-			Threads: 16`,
+				text: [
+					'AMD® Ryzen 7 5700U',
+					'Speed: 1.80 GHz - 4.30 GHz',
+					'Cores: 8',
+					'Threads: 16',
+				],
 			},
 			ram: {
 				title: 'Memory',
-				text: `Capacity: 8GB
-			Type: LPDDR4X`,
+				text: ['Capacity: 8GB', 'Type: LPDDR4X'],
 			},
 			screen: {
 				title: 'Display',
-				text: `Size: 15.6″
-			Resolution: Full HD
-			Technology: Touch IPS
-			Hz: 60`,
+				text: [
+					'Size: 15.6″',
+					'Resolution: Full HD',
+					'Technology: Touch IPS',
+					'Hz: 60',
+				],
 			},
 			gpu: {
 				title: 'Graphics',
-				text: `NVIDIA® GeForce® MX450
-			Memory: 2GB GDDR6`,
+				text: ['NVIDIA® GeForce® MX450', 'Memory: 2GB GDDR6'],
 			},
 			storage: {
 				title: 'Storage',
-				text: `Capacity: 256 GB
-			Type: SSD
-			Technology: PCIe 3.0 NVMe`,
+				text: [
+					'Capacity: 256 GB',
+					'Type: SSD',
+					'Technology: PCIe 3.0 NVMe',
+				],
 			},
 			connectivity: {
 				title: 'Connectivity',
-				text: `Dual-band Wi-Fi 5 (802.11ac)
-			Bluetooth™ 5
-			Ethernet: No`,
+				text: [
+					'Dual-band Wi-Fi 5 (802.11ac)',
+					'Bluetooth™ 5',
+					'Ethernet: No',
+				],
 			},
 			os: {
 				title: 'Operating System',
-				text: `Windows 11
-			Version: Home 64 Bits`,
+				text: ['Windows 11', 'Version: Home 64 Bits'],
 			},
 			ports: {
 				title: 'Ports',
-				text: `USB-A 2.0
-			USB-A 3.2 Gen 1
-			USB-C 3.2 Gen 1
-			HDMI 1
-			3.5mm Combo Audio Jack`,
+				text: [
+					'USB-A 2.0',
+					'USB-A 3.2 Gen 1',
+					'USB-C 3.2 Gen 1',
+					'HDMI 1',
+					'3.5mm Combo Audio Jack',
+				],
 			},
 			other: {
 				title: 'Other features',
-				text: `2-in-1 System 
-			(tablet + notebook)
-			720p Webcam
-			Backlit Keyboard
-			Card Reader`,
+				text: [
+					'2-in-1 System (tablet + notebook)',
+					'720p Webcam',
+					'Backlit Keyboard',
+					'Card Reader',
+				],
 			},
 			model: {
 				title: 'Model',
-				text: `Brand: Asus
-			Line: ZenBook Flip 15
-			Model: Q508UG-212.R7TBL`,
+				text: [
+					'Brand: Asus',
+					'Line: ZenBook Flip 15',
+					'Model: Q508UG-212.R7TBL',
+				],
 			},
 			dimensions: {
 				title: 'Dimensions',
-				text: `35.78 x 23.0 x 1.99 cm
-			Weight: 1.99 kg
-			Chassis: Aluminum/Plastic`,
+				text: [
+					'35.78 x 23.0 x 1.99 cm',
+					'Weight: 1.99 kg',
+					'Chassis: Aluminum/Plastic',
+				],
 			},
 			usage: {
 				title: 'Recommended use',
-				text: 'Programming, photo editing, design, architecture, CAD, Multimedia',
+				text: [
+					'Programming',
+					'Photo editing',
+					'Design',
+					'Architecture',
+					'CAD',
+					'Multimedia',
+				],
 			},
 		},
 	},
@@ -652,79 +724,90 @@ const products = [
 			'07.jpg',
 			'08.jpg',
 		],
-		banner: '',
-		description: '',
+		banner: 'banner.webp',
+		description:
+			'The IdeaPad Flex 5 (14", AMD) features thin bezels on all four sides to provide a sleek and contemporary look, giving you more screen space to enjoy. With a 360° hinge, the IdeaPad Flex 5 transforms into a laptop, tablet, and more. Its long battery life ensures you can take your IdeaPad Flex 5 with you wherever and whenever you need it',
 		features: {
 			cpu: {
 				title: 'Processor',
-				text: `AMD® Ryzen 5 5500U
-			Speed: 2.10 GHz - 4.0 GHz
-			Cores: 6
-			Threads: 12`,
+				text: [
+					'AMD® Ryzen 5 5500U',
+					'Speed: 2.10 GHz - 4.0 GHz',
+					'Cores: 6',
+					'Threads: 12',
+				],
 			},
 			ram: {
 				title: 'Memory',
-				text: `Capacity: 8GB
-			Type: DDR4
-			Expandable: 12GB / 20GB`,
+				text: [
+					'Capacity: 8GB',
+					'Type: DDR4',
+					'Expandable: 12GB / 20GB',
+				],
 			},
 			screen: {
 				title: 'Display',
-				text: `Size: 14″
-			Resolution: FULL HD
-			Technology: IPS
-			Hz: 60`,
+				text: [
+					'Size: 14″',
+					'Resolution: FULL HD',
+					'Technology: IPS',
+					'Hz: 60',
+				],
 			},
 			gpu: {
 				title: 'Graphics',
-				text: 'AMD Radeon RX Vega 7',
+				text: ['AMD Radeon RX Vega 7'],
 			},
 			storage: {
 				title: 'Storage',
-				text: `Capacity: 256 GB
-			Type: SSD
-			Technology: PCIe NVMe`,
+				text: [
+					'Capacity: 256 GB',
+					'Type: SSD',
+					'Technology: PCIe NVMe',
+				],
 			},
 			connectivity: {
 				title: 'Connectivity',
-				text: `WiFi: 2×2 802.11AC
-			Bluetooth®
-			Ethernet: No`,
+				text: ['WiFi: 2×2 802.11AC', 'Bluetooth®', 'Ethernet: No'],
 			},
 			os: {
 				title: 'Operating System',
-				text: `Windows 11
-			Version: Home 64 Bits`,
+				text: ['Windows 11', 'Version: Home 64 Bits'],
 			},
 			ports: {
 				title: 'Ports',
-				text: `USB 2.0
-			USB 3.2
-			USB-C 3.2
-			HDMI
-			Headphone/Mic Jack`,
+				text: [
+					'USB 2.0',
+					'USB 3.2',
+					'USB-C 3.2',
+					'HDMI',
+					'Headphone/Mic Jack',
+				],
 			},
 			other: {
 				title: 'Other features',
-				text: `720p Webcam
-			Backlit Keyboard
-			SD Card Reader`,
+				text: ['720p Webcam', 'Backlit Keyboard', 'SD Card Reader'],
 			},
 			model: {
 				title: 'Model',
-				text: `Brand: Lenovo
-			Line: IdeaPad 3
-			Model: 82KT00GVUS`,
+				text: ['Brand: Lenovo', 'Line: IdeaPad 3', 'Model: 82KT00GVUS'],
 			},
 			dimensions: {
 				title: 'Dimensions',
-				text: `32.4 x 21.5 x 1.9 cm
-			Weight: 1.45 kg
-			Chassis: Plastic`,
+				text: [
+					'32.4 x 21.5 x 1.9 cm',
+					'Weight: 1.45 kg',
+					'Chassis: Plastic',
+				],
 			},
 			usage: {
 				title: 'Recommended use',
-				text: 'Office tasks, Multimedia, Internet, basic editing',
+				text: [
+					'Office tasks',
+					'Multimedia',
+					'Internet',
+					'Basic editing',
+				],
 			},
 		},
 	},

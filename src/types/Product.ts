@@ -16,5 +16,5 @@ export type Product = {
 			title: string;
 			text: string[];
 		};
-	};
+	} | null;
 };
