@@ -15,7 +15,7 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 	const { src, alt, href, id } = image;
 
 	const styles: string = `
-		rounded-xl pt-6 border-2 md:min-w-[180px] md:max-w-[180px] xl:min-w-[220px] xl:max-w-[222px] 
+		rounded-xl pt-6 border-2 md:w-[180px] xl:w-[240px] 
 	`;
 
 	if (id === current) {
@@ -29,7 +29,7 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 						alt={alt}
 						className='ml-auto mr-auto w-[270px] px-4'
 					/>
-					<figcaption className='bg-cyan-700 pb-6 border border-cyan-500  rounded-b-xl px-4'>
+					<figcaption className='bg-cyan-700 pb-6 border border-cyan-500 rounded-b-xl px-4'>
 						<p className='border-t w-auto pl-2 pt-4 text-lg pb-4 font-medium'>
 							{alt}
 						</p>
@@ -51,7 +51,7 @@ export const CarouselItem: FunctionComponent<CarouselItemProps> = ({
 				current === id - 1 || current === id + 1
 					? 'md:block'
 					: 'md:hidden'
-			} xl:block`}
+			} 2xl:block`}
 			onClick={() => handleItemClick(id)}
 		>
 			<img

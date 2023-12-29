@@ -49,13 +49,13 @@ export const Catalog: FunctionComponent = () => {
 	}, [fetchProductsData]);
 
 	return (
-		<section className='pt-24' id='Products'>
+		<section className='pt-24 pl-4 w-full' id='Products'>
 			<FiltersForm handleFormChange={handleFormChange} />
 			{status === 'error' && <ResultsMessage amount={0} />}
 			{status === 'success' && (
 				<ResultsMessage amount={products.length} />
 			)}
-			<section className='grid px-6 min-w-[360px] max-w-[400px] min-h-[300px] w-[80%] ml-auto mr-auto sm:max-w-[100%] sm:w-auto sm:ml-0 grid-cols-1 justify-items-center gap-y-4 gap-x-4 mt-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+			<section className='grid min-w-[360px] max-w-[400px] min-h-[300px] ml-auto mr-auto w-[80%] sm:max-w-[95%] sm:w-auto sm:ml-0 grid-cols-1 justify-items-center gap-y-4 gap-x-2 mt-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
 				{status === 'loading' && (
 					<p className='text-center col-span-5 mt-8 w-auto'>
 						<Loader />

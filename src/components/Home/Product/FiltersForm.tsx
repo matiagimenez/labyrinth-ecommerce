@@ -22,7 +22,7 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 	}
 
 	return (
-		<form action='' className='pl-4'>
+		<form action=''>
 			<fieldset className='inline-block w-[45%] md:w-[300px] xl:w-[20%]'>
 				<label className='mr-2 6 font-light block' htmlFor='filter'>
 					Filter
@@ -50,7 +50,7 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 					name='minPrice'
 					id='min'
 					placeholder='$ Min'
-					className={`${inputStyles} w-[45%] md:w-[145px] mr-0.5 ${removeArrowsStyle}`}
+					className={`${inputStyles} w-[45%] md:w-[145px] mr-1 ${removeArrowsStyle}`}
 					onChange={(event) => {
 						if (!event.target.value) {
 							handleFormChange(event.target.name, 0);
