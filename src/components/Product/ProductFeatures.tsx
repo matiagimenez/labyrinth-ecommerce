@@ -13,7 +13,10 @@ export const ProductFeatures: FunctionComponent<ProductFeaturesProps> = ({
 		<section className='grid grid-cols-1 mx-4 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-full lg:ml-auto lg:mr-auto '>
 			{Object.keys(product?.features).map((currentFeature: string) => {
 				const src = `/feature-icons/${currentFeature}.png`;
-				const { title, text } = product.features[currentFeature];
+				const { title, text } = product.features
+					? product.features[currentFeature]
+					: { title: '', text: [] };
+
 				return (
 					<article
 						key={`${product?.id}-${currentFeature}`}

@@ -17,7 +17,7 @@ export const ProductInformation: FunctionComponent<ProductInformationProps> = ({
 			<p className='p-4 pt-1 max-w-full lg:p-0 lg:pb-4'>
 				{product?.description}
 			</p>
-			<ProductFeatures product={product} />
+			{product?.features && <ProductFeatures product={product} />}
 		</section>
 	);
 };
