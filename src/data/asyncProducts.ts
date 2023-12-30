@@ -23,8 +23,6 @@ const products = [
 			'05-600x600.jpg',
 			'06-600x600.jpg',
 			'07-600x600.jpg',
-			'08-600x600.jpg',
-			'09-600x600.jpg',
 		],
 		banner: 'banner-alienware-m15-r7.jpg',
 		description:
