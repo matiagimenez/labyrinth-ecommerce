@@ -138,10 +138,6 @@ const products = [
 			'03-600x600.webp',
 			'04-600x600.webp',
 			'05-600x600.webp',
-			'06-600x600.webp',
-			'07-600x600.webp',
-			'08-600x600.webp',
-			'09-600x600.webp',
 		],
 		banner: 'banner-macbook.webp',
 		description:
@@ -486,7 +482,6 @@ const products = [
 			'04-600x600.jpg',
 			'05-600x600.jpg',
 			'06-600x600.jpg',
-			'07-600x600.jpg',
 		],
 		banner: 'banner-vivobook.jpg',
 		description:
