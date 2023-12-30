@@ -74,7 +74,7 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 					</figcaption>
 				</Link>
 				{stock === 0 && (
-					<p className='absolute bg-brightpink border-1 w-full top-[50%] py-2 text-center text-white font-medium'>
+					<p className='absolute bg-gray-600 border-1 w-full m-auto top-0 bottom-0 right-0 left-0 h-[40px] py-2 text-center text-white font-medium'>
 						No stock available
 					</p>
 				)}
