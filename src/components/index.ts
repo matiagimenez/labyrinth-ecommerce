@@ -4,6 +4,6 @@ export * from './Header/ShoppingCart/ShoppingCart';
 export * from './Header/WishList';
 export * from './Product/';
 export * from './Home/Carousel/';
-export * from './Home/Product/';
+export * from './Home/Catalog/';
 export * from './Tooltip';
 export * from './Loader';

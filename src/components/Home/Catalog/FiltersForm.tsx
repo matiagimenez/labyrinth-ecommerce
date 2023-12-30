@@ -22,7 +22,7 @@ export const FiltersForm: FunctionComponent<FiltersFormProps> = ({
 	}
 
 	return (
-		<form action=''>
+		<form action='' className='pl-4'>
 			<fieldset className='inline-block w-[45%] md:w-[300px] xl:w-[20%]'>
 				<label className='mr-2 6 font-light block' htmlFor='filter'>
 					Filter
