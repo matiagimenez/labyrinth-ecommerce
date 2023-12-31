@@ -45,7 +45,7 @@ export const CarouselControls: FunctionComponent<CarouselControlsProps> = ({
 						}`}
 					/>
 				);
-			})}{' '}
+			})}
 			<button
 				onClick={handleNext}
 				className={`${
