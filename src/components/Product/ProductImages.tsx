@@ -41,7 +41,7 @@ export const ProductImages: FunctionComponent<ProductImagesProps> = ({
 			<img
 				src={`${src}-${images[current]}`}
 				alt={alt}
-				className='px-8 sm:px-0 ml-auto mr-auto max-w-[400px] max-h-[400px] md:max-w-[500px] md:max-h-[500px]'
+				className='px-4 pr-12 sm:px-0 ml-auto mr-auto max-w-[400px] max-h-[400px] md:max-w-[500px] md:max-h-[500px]'
 			/>
 			<div className='block absolute bottom-0 left-0 right-0 w-fit ml-auto mr-auto sm:hidden '>
 				{range(0, images.length).map((index) => {

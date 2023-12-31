@@ -21,23 +21,9 @@ export const ProductDetail: FunctionComponent<ProductDetailProps> = ({
 				images={product?.images}
 			/>
 			<section className='px-4 flex flex-col xl:justify-center xl:pl-8 relative'>
-				<p className='flex items-center justify-between py-4'>
+				<p className='flex items-center gap-6 pt-6'>
 					<span className='bg-brightpink inline-block w-fit my-2 text-cyan-900 py-1 px-2 rounded-xl text-[11px] font-medium'>
 						{product?.category.toUpperCase()}
-					</span>
-					<span className='leading-none mr-12'>
-						<Button
-							active={<VscHeartFilled />}
-							inactive={<VscHeart />}
-							isActive={
-								false /* TODO: Active if exists on wishlist */
-							}
-							handleClick={() => {
-								{
-									//TODO: Add to wishlist
-								}
-							}}
-						/>
 					</span>
 					<span className='absolute hidden  inset-0 w-[500px] -z-10 text-cyan-600 font-bold text-6xl opacity-70 xl:block rotate-90 mb-8'>
 						{product?.name.toLocaleUpperCase()}
@@ -55,16 +41,31 @@ export const ProductDetail: FunctionComponent<ProductDetailProps> = ({
 					{product?.price && formatPrice(product?.price)}
 				</p>
 				<p className='font-medium'>Stock available: {product?.stock}</p>
-
-				<button
-					onClick={() => {
-						if (!product) return;
-						handleAddShoppingCartItem(product);
-					}}
-					className='bg-rustyred text-white p-2 w-2/3 rounded-lg border mt-4 border-rustyred hover:bg-transparent hover:text-rustyred transition-colors duration-300'
-				>
-					Add to cart
-				</button>
+				<p className='flex items-center gap-12 mt-4'>
+					<button
+						onClick={() => {
+							if (!product) return;
+							handleAddShoppingCartItem(product);
+						}}
+						className='bg-rustyred text-white p-2 w-[200px] rounded-lg border border-rustyred hover:bg-transparent hover:text-rustyred transition-colors duration-300'
+					>
+						Add to cart
+					</button>
+					<span className='leading-none mr-12 flex items-cente min-w-[40px]'>
+						<Button
+							active={<VscHeartFilled />}
+							inactive={<VscHeart />}
+							isActive={
+								false /* TODO: Active if exists on wishlist */
+							}
+							handleClick={() => {
+								{
+									//TODO: Add to wishlist
+								}
+							}}
+						/>
+					</span>
+				</p>
 			</section>
 		</section>
 	);
