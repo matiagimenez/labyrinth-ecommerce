@@ -32,7 +32,7 @@ Labyrinth e-commerce </h1>
     -   [x] Users should be able to filter the products in the catalog.
     -   [x] Users should be able to add products to the cart from this page.
 -   [ ] Product Detail Page
-    -   [ ] Users should be able to view the product's images, descriptions, ratings, and prices.
+    -   [x] Users should be able to view the product's images, description, features, and prices.
     -   [ ] Users should be able to add products to the cart/wishlist from this page.
 -   [ ] Shopping Cart
     -   [x] Users should be able to add/remove products from the shopping cart.
