@@ -39,7 +39,7 @@ export const ProductPage = () => {
 				<>
 					<button
 						onClick={() => navigate(-1)}
-						className='pl-4 sm:pl-12 pt-8 font-medium text-rustyred flex items-center gap-2 hover:underline underline-offset-4 group'
+						className='pl-4 pt-4 pb-4 xl:pt-16 xl:pl-24 font-medium text-rustyred flex items-center gap-2 hover:underline underline-offset-4 group'
 					>
 						<span className='group-hover:-translate-x-1 transition-transform'>
 							<FaArrowLeftLong />

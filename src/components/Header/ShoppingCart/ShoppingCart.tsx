@@ -1,39 +1,17 @@
-import { FunctionComponent, useContext, useState } from 'react';
+import { FunctionComponent, useState } from 'react';
 import { ShoppingCartItem, Button, MenuList } from '..';
 import { PiShoppingCart, PiShoppingCartFill } from 'react-icons/pi';
-import { ShoppingCartContext } from '../../../context/ShoppingCartContext';
 import { formatPrice } from '../../../utils';
+import { useShoppingCart } from '../../../hooks';
 
 export const ShoppingCart: FunctionComponent = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	let total: number = 0.0;
-
-	const { shoppingCart, updateShoppingCart } =
-		useContext(ShoppingCartContext);
-
-	function handleRemoveShoppingCartItem(id: string) {
-		const nextShoppingCart = { ...shoppingCart };
-		delete nextShoppingCart[id];
-		updateShoppingCart(nextShoppingCart);
-	}
-
-	function handleUpdateShoppingCartItem(id: string, amount: number) {
-		const nextShoppingCart = { ...shoppingCart };
-		nextShoppingCart[id].amount += amount;
-
-		if (nextShoppingCart[id].amount === 0) {
-			delete nextShoppingCart[id];
-		}
-
-		if (
-			amount > 0 &&
-			nextShoppingCart[id].product.stock < nextShoppingCart[id].amount
-		) {
-			nextShoppingCart[id].amount = nextShoppingCart[id].product.stock;
-		}
-
-		updateShoppingCart(nextShoppingCart);
-	}
+	const {
+		shoppingCart,
+		handleRemoveShoppingCartItem,
+		handleUpdateShoppingCartItem,
+		total,
+	} = useShoppingCart();
 
 	return (
 		<>
@@ -51,7 +29,6 @@ export const ShoppingCart: FunctionComponent = () => {
 					<section>
 						{Object.keys(shoppingCart).map((key) => {
 							const { product, amount } = shoppingCart[key];
-							total += product.price * amount;
 							return (
 								<ShoppingCartItem
 									key={product.id}

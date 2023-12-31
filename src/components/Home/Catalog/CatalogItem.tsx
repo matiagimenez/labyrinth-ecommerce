@@ -1,11 +1,11 @@
-import { FunctionComponent, useContext } from 'react';
+import { FunctionComponent } from 'react';
 import { Button, Tooltip } from '../..';
 import { Product } from '../../../types';
 import { PiShoppingCart, PiShoppingCartFill } from 'react-icons/pi';
 import { formatPrice } from '../../../utils';
-import { ShoppingCartContext } from '../../../context';
-import { toast } from 'react-toastify';
+
 import { Link } from 'react-router-dom';
+import { useShoppingCart } from '../../../hooks';
 
 type CatalogItemProps = {
 	product: Product;
@@ -16,36 +16,7 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 }) => {
 	const { id, images, name, category, price, priceCurrency, stock } = product;
 
-	const { shoppingCart, updateShoppingCart } =
-		useContext(ShoppingCartContext);
-
-	function handleUpdateShoppingCart(product: Product) {
-		if (
-			!shoppingCart[product.id] &&
-			Object.entries(shoppingCart).length === 4
-		) {
-			return toast.error(
-				'The cart can contain up to 4 different products'
-			);
-		}
-
-		const amount = shoppingCart[product.id]
-			? shoppingCart[product.id].amount + 1
-			: 1;
-
-		if (amount > stock) {
-			return toast.error('There is no more stock available');
-		}
-
-		updateShoppingCart({
-			...shoppingCart,
-			[product.id]: {
-				product,
-				amount,
-			},
-		});
-		toast.success('Item added to the cart');
-	}
+	const { handleAddShoppingCartItem } = useShoppingCart();
 
 	return (
 		<article className='relative overflow-hidden border-2 rounded-lg w-[100%] ml-auto mr-auto border-rustyred md:w-[95%]'>
@@ -90,7 +61,7 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 						inactive={<PiShoppingCart />}
 						isActive={false}
 						isEnabled={stock > 0}
-						handleClick={() => handleUpdateShoppingCart(product)}
+						handleClick={() => handleAddShoppingCartItem(product)}
 					/>
 					{product.stock > 0 && (
 						<Tooltip
