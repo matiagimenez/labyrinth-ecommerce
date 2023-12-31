@@ -1,44 +1,23 @@
-import { FunctionComponent, useState } from 'react';
+import { FunctionComponent } from 'react';
 import { Image } from '../../../types';
 import { CarouselItem, CarouselControls } from '.';
-import { useSwipeable } from 'react-swipeable';
+import { useSwipe } from '../../../hooks';
 
 type CarouselProps = {
 	images: Image[];
 };
 
 export const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
-	const [current, setCurrent] = useState<number>(2);
+	const { current, setCurrent, handlers, handlePrevious, handleNext } =
+		useSwipe({
+			minIndex: 1,
+			maxIndex: images.length,
+			initialIndex: 2,
+		});
 
 	function handleItemClick(id: number) {
 		setCurrent(id);
 	}
-
-	function handleNext() {
-		if (current === images.length) return;
-		setCurrent(current + 1);
-	}
-
-	function handlePrevious() {
-		if (current === 1) return;
-		setCurrent(current - 1);
-	}
-
-	const config = {
-		delta: 10,
-		preventScrollOnSwipe: false,
-		trackTouch: true,
-		trackMouse: false,
-		rotationAngle: 0,
-		swipeDuration: Infinity,
-		touchEventOptions: { passive: true },
-	};
-
-	const handlers = useSwipeable({
-		onSwipedLeft: () => handleNext(),
-		onSwipedRight: () => handlePrevious(),
-		...config,
-	});
 
 	return (
 		<section className='md:mt-24'>
