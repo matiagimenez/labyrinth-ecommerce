@@ -7,6 +7,6 @@ type WishListContextType = {
 };
 
 export const WishListContext = createContext<WishListContextType>({
-	wishList: [],
-	updateWishList: () => [],
+	wishList: {},
+	updateWishList: () => {},
 });

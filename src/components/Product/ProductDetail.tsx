@@ -4,6 +4,7 @@ import { VscHeart, VscHeartFilled } from 'react-icons/vsc';
 import { Button, ProductImages } from '..';
 import { formatPrice } from '../../utils';
 import { useShoppingCart } from '../../hooks';
+import { useWishList } from '../../hooks/useWishList';
 
 type ProductDetailProps = {
 	product: Product | undefined;
@@ -12,6 +13,8 @@ export const ProductDetail: FunctionComponent<ProductDetailProps> = ({
 	product,
 }) => {
 	const { handleAddShoppingCartItem } = useShoppingCart();
+	const { handleAddWishListItem, handleRemoveWishListItem, wishList } =
+		useWishList();
 
 	return (
 		<section className='relative flex flex-col xl:flex-row max-w-[1000px] mr-auto ml-auto'>
@@ -56,11 +59,15 @@ export const ProductDetail: FunctionComponent<ProductDetailProps> = ({
 							active={<VscHeartFilled />}
 							inactive={<VscHeart />}
 							isActive={
-								false /* TODO: Active if exists on wishlist */
+								product !== undefined &&
+								wishList[product.id] !== undefined
 							}
 							handleClick={() => {
-								{
-									//TODO: Add to wishlist
+								if (!product) return;
+								if (wishList[product.id] !== undefined) {
+									handleRemoveWishListItem(product.id);
+								} else {
+									handleAddWishListItem(product);
 								}
 							}}
 						/>

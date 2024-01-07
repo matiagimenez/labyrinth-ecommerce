@@ -5,7 +5,7 @@ type MenuListProps = {
 	children: ReactNode;
 };
 
-export const MenuList: FunctionComponent<MenuListProps> = ({
+export const ProductList: FunctionComponent<MenuListProps> = ({
 	isOpen,
 	children,
 }) => {

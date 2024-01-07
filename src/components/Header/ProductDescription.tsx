@@ -9,7 +9,7 @@ type ProductDescriptionProps = {
 
 export const ProductDescription: FunctionComponent<ProductDescriptionProps> = ({
 	product,
-	amount,
+	amount = 1,
 }) => {
 	const src = `/product-images/${product.id}-${product.images[0]}`;
 

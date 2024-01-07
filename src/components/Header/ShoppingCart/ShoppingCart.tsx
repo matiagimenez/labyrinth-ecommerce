@@ -1,5 +1,5 @@
 import { FunctionComponent, useState } from 'react';
-import { ShoppingCartItem, Button, MenuList } from '..';
+import { ShoppingCartItem, Button, ProductList } from '..';
 import { PiShoppingCart, PiShoppingCartFill } from 'react-icons/pi';
 import { formatPrice } from '../../../utils';
 import { useShoppingCart } from '../../../hooks';
@@ -24,7 +24,7 @@ export const ShoppingCart: FunctionComponent = () => {
 				}}
 				notificationEnabled={Object.keys(shoppingCart).length > 0}
 			/>
-			<MenuList isOpen={isOpen}>
+			<ProductList isOpen={isOpen}>
 				{Object.keys(shoppingCart).length > 0 ? (
 					<section>
 						{Object.keys(shoppingCart).map((key) => {
@@ -54,7 +54,7 @@ export const ShoppingCart: FunctionComponent = () => {
 						$ {formatPrice(total)}
 					</p>
 				}
-			</MenuList>
+			</ProductList>
 		</>
 	);
 };
