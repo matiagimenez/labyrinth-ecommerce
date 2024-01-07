@@ -28,7 +28,7 @@ export const ProductDetail: FunctionComponent<ProductDetailProps> = ({
 					<span className='bg-brightpink inline-block w-fit my-2 text-cyan-900 py-1 px-2 rounded-xl text-[11px] font-medium'>
 						{product?.category.toUpperCase()}
 					</span>
-					<span className='absolute hidden  inset-0 w-[500px] -z-10 text-cyan-600 font-bold text-6xl opacity-70 xl:block rotate-90 mb-8'>
+					<span className='absolute hidden inset-0 w-[500px] -z-10 text-cyan-500 font-bold text-5xl opacity-70 xl:block rotate-90 mb-8'>
 						{product?.name.toLocaleUpperCase()}
 					</span>
 				</p>
