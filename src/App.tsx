@@ -7,7 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 function App() {
 	const [shoppingCart, setShoppingCart] = useState<ShoppingCart>({});
-	const [wishList, setWishList] = useState<WishList>([]);
+	const [wishList, setWishList] = useState<WishList>({});
 
 	function updateShoppingCart(products: ShoppingCart) {
 		setShoppingCart(products);
