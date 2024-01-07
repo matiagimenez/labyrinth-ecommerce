@@ -18,7 +18,7 @@ export const WishListItem: FunctionComponent<WishListItemProps> = ({
 	return (
 		<article className='p-3 py-1 relative border-b-2 border-cyan-500'>
 			<ProductDescription product={product} />
-			<div className='mr-4 py-2 items-center flex justify-end'>
+			<div className='mr-4 py-2 items-center gap-1 flex justify-between'>
 				<button
 					onClick={() => {
 						if (!product) return;

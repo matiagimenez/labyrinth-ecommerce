@@ -14,7 +14,7 @@ export const ProductDescription: FunctionComponent<ProductDescriptionProps> = ({
 	const src = `/product-images/${product.id}-${product.images[0]}`;
 
 	return (
-		<>
+		<a href={`/product/${product.id}`}>
 			<img
 				src={src}
 				alt={product.name}
@@ -28,6 +28,6 @@ export const ProductDescription: FunctionComponent<ProductDescriptionProps> = ({
 					</span>
 				)}
 			</p>
-		</>
+		</a>
 	);
 };
