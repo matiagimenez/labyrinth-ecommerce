@@ -1,11 +1,18 @@
-import { FunctionComponent, useState } from 'react';
+import { FunctionComponent } from 'react';
 import { ShoppingCartItem, Button, ProductList } from '..';
 import { PiShoppingCart, PiShoppingCartFill } from 'react-icons/pi';
 import { formatPrice } from '../../../utils';
 import { useShoppingCart } from '../../../hooks';
 
-export const ShoppingCart: FunctionComponent = () => {
-	const [isOpen, setIsOpen] = useState(false);
+type ShoppingCartProps = {
+	isOpen: boolean;
+	toggleMenu: (element: string, isOpen: boolean) => void;
+};
+
+export const ShoppingCart: FunctionComponent<ShoppingCartProps> = ({
+	isOpen,
+	toggleMenu,
+}) => {
 	const {
 		shoppingCart,
 		handleRemoveShoppingCartItem,
@@ -20,7 +27,7 @@ export const ShoppingCart: FunctionComponent = () => {
 				inactive={<PiShoppingCart />}
 				isActive={isOpen}
 				handleClick={() => {
-					setIsOpen(!isOpen);
+					toggleMenu('shopping-cart', !isOpen);
 				}}
 				notificationEnabled={Object.keys(shoppingCart).length > 0}
 			/>

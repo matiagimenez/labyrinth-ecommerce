@@ -1,11 +1,18 @@
-import { FunctionComponent, useState } from 'react';
+import { FunctionComponent } from 'react';
 import { Button } from '../Button';
 import { VscHeart, VscHeartFilled } from 'react-icons/vsc';
 import { ProductList, WishListItem } from '..';
 import { useWishList } from '../../../hooks/useWishList';
 
-export const WishList: FunctionComponent = () => {
-	const [isOpen, setIsOpen] = useState(false);
+type WishListProps = {
+	isOpen: boolean;
+	toggleMenu: (element: string, isOpen: boolean) => void;
+};
+
+export const WishList: FunctionComponent<WishListProps> = ({
+	isOpen,
+	toggleMenu,
+}) => {
 	const { wishList, handleRemoveWishListItem } = useWishList();
 	return (
 		<>
@@ -14,7 +21,7 @@ export const WishList: FunctionComponent = () => {
 				inactive={<VscHeart />}
 				isActive={isOpen}
 				handleClick={() => {
-					setIsOpen(!isOpen);
+					toggleMenu('wishlist', !isOpen);
 				}}
 			/>
 			<ProductList isOpen={isOpen}>
