@@ -3,8 +3,6 @@ import { Button, Tooltip } from '../..';
 import { Product } from '../../../types';
 import { PiShoppingCart, PiShoppingCartFill } from 'react-icons/pi';
 import { formatPrice } from '../../../utils';
-
-import { Link } from 'react-router-dom';
 import { useShoppingCart } from '../../../hooks';
 
 type CatalogItemProps = {
@@ -24,7 +22,7 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 				{category.toUpperCase()}
 			</span>
 			<figure className='relative'>
-				<Link to={`/product/${id}`}>
+				<a href={`/product/${id}`}>
 					<p className={stock !== 0 ? 'group' : 'group'}>
 						<img
 							src={`/product-images/${id}-${images[0]}`}
@@ -43,7 +41,7 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 					>
 						{name}
 					</figcaption>
-				</Link>
+				</a>
 				{stock === 0 && (
 					<p className='absolute bg-gray-600 p-2 py-1 rounded-r-full top-2 -left-1 w-fit text-white font-medium text-center text-xs'>
 						NO STOCK AVAILABLE
