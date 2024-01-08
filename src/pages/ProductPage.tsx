@@ -1,6 +1,6 @@
-import { Navigate, useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Loader, ProductInformation } from '../components';
-import { ProductDetail } from '../components/Product/ProductDetail';
+import { ProductDetail } from '../components/ProductPage/ProductDetail';
 import { useEffect, useState } from 'react';
 import { Product } from '../types';
 import { getProductById } from '../data/asyncProducts';
@@ -12,22 +12,21 @@ export const ProductPage = () => {
 	const { productId } = useParams();
 	const navigate = useNavigate();
 
-	async function fetchProductData(id: string) {
-		const currentProduct: Product = await getProductById(id);
-		if (currentProduct) {
-			setProduct(currentProduct);
-			setIsLoading(false);
-		} else {
-			<Navigate to='/error' replace={true} />;
-		}
-	}
-
 	useEffect(() => {
+		async function fetchProductData(id: string) {
+			const currentProduct: Product = await getProductById(id);
+			if (currentProduct) {
+				setProduct(currentProduct);
+				setIsLoading(false);
+			} else {
+				return navigate('/error');
+			}
+		}
 		if (productId) {
 			setIsLoading(true);
 			fetchProductData(productId);
 		}
-	}, [productId]);
+	}, [productId, navigate]);
 
 	return (
 		<>
