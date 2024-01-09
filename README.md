@@ -39,11 +39,12 @@ Labyrinth e-commerce </h1>
     -   [x] Users should be able to view the purchase summary and the total amount to be paid.
     -   [x] Users should be able to remove products.
     -   [x] Users should be able to modify the quantity of the product (if it's reduced to 0, remove it).
-    -   [ ] Users should be able to view the products added to their cart even after closing and reopening the browser.
+    -   [x] Users should be able to view the products added to their cart even after closing and reopening the browser.
     -   [ ] Users should be able to see the shopping cart synchronized between tabs
 -   [ ] Wishlist
     -   [x] Users should be able to view their products in the wishlist.
     -   [x] Users should be able to remove products from the wishlist.
     -   [x] Users should be able to navigate to the detail page of each product.
     -   [x] Users should be able to add a product from the wishlist to the cart.
-    -   [ ] Users should be able to view the products added to their wishlist even after closing and reopening the browser.
+    -   [x] Users should be able to view the products added to their wishlist even after closing and reopening the browser.
+    -   [ ] Users should be able to see the wish list synchronized between tabs
