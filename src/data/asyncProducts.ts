@@ -860,7 +860,7 @@ export const getProductById = (id: string): Promise<Product> => {
 		setTimeout(() => {
 			const product = products.find((prod: Product) => prod.id === id);
 			resolve(product as Product);
-		}, DELAY);
+		}, 0);
 	});
 };
 
