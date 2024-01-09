@@ -3,6 +3,7 @@ import { ShoppingCartContext } from '../context';
 import { ShoppingCart } from '../types';
 import { toast } from 'react-toastify';
 import { Product } from '../types/Product';
+import { saveLocalStorage } from '../helpers';
 
 type useShoppingCartReturnTypes = {
 	shoppingCart: ShoppingCart;
@@ -16,10 +17,13 @@ export const useShoppingCart = (): useShoppingCartReturnTypes => {
 	const { shoppingCart, updateShoppingCart } =
 		useContext(ShoppingCartContext);
 
+	const localStorageKey = 'shopping-cart';
+
 	function handleRemoveShoppingCartItem(id: string) {
 		const nextShoppingCart = { ...shoppingCart };
 		delete nextShoppingCart[id];
 		updateShoppingCart(nextShoppingCart);
+		saveLocalStorage(localStorageKey, JSON.stringify(nextShoppingCart));
 	}
 
 	function handleUpdateShoppingCartItem(id: string, amount: number) {
@@ -38,6 +42,7 @@ export const useShoppingCart = (): useShoppingCartReturnTypes => {
 		}
 
 		updateShoppingCart(nextShoppingCart);
+		saveLocalStorage(localStorageKey, JSON.stringify(nextShoppingCart));
 	}
 
 	function handleAddShoppingCartItem(product: Product) {
@@ -58,13 +63,15 @@ export const useShoppingCart = (): useShoppingCartReturnTypes => {
 			return toast.error('There is no more stock available');
 		}
 
-		updateShoppingCart({
+		const nextShoppingCart = {
 			...shoppingCart,
 			[product.id]: {
 				product,
 				amount,
 			},
-		});
+		};
+		updateShoppingCart(nextShoppingCart);
+		saveLocalStorage(localStorageKey, JSON.stringify(nextShoppingCart));
 		toast.success('Item added to the cart');
 	}
 

@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { WishListContext } from '../context';
 import { WishList, Product } from '../types';
 import { toast } from 'react-toastify';
+import { saveLocalStorage } from '../helpers';
 
 type useWishList = {
 	wishList: WishList;
@@ -11,6 +12,7 @@ type useWishList = {
 
 export const useWishList = () => {
 	const { wishList, updateWishList } = useContext(WishListContext);
+	const localStorageKey = 'wish-list';
 
 	function handleRemoveWishListItem(id: string) {
 		if (!wishList[id]) return;
@@ -18,6 +20,7 @@ export const useWishList = () => {
 		const nextWishList = { ...wishList };
 		delete nextWishList[id];
 		updateWishList(nextWishList);
+		saveLocalStorage(localStorageKey, JSON.stringify(nextWishList));
 		toast.info('Item removed from the wishlist');
 	}
 
@@ -33,6 +36,7 @@ export const useWishList = () => {
 		const nextWishList = { ...wishList, [product.id]: { product } };
 
 		updateWishList(nextWishList);
+		saveLocalStorage(localStorageKey, JSON.stringify(nextWishList));
 		toast.success('Item added to the wishlist');
 	}
 

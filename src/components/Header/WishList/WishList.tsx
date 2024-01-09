@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 import { Button } from '../Button';
 import { VscHeart, VscHeartFilled } from 'react-icons/vsc';
 import { ProductList, WishListItem } from '..';
-import { useWishList } from '../../../hooks/useWishList';
+import { useWishList } from '../../../hooks/';
 
 type WishListProps = {
 	isOpen: boolean;

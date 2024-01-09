@@ -4,10 +4,16 @@ import { HomePage, ErrorPage, ProductPage } from './pages/';
 import { ShoppingCart, WishList } from './types';
 import { ShoppingCartContext, WishListContext } from './context/';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { readLocalStorage } from './helpers';
 
 function App() {
-	const [shoppingCart, setShoppingCart] = useState<ShoppingCart>({});
-	const [wishList, setWishList] = useState<WishList>({});
+	const [shoppingCart, setShoppingCart] = useState<ShoppingCart>(() => {
+		return JSON.parse(readLocalStorage('shopping-cart') ?? '{}');
+	});
+
+	const [wishList, setWishList] = useState<WishList>(() => {
+		return JSON.parse(readLocalStorage('wish-list') ?? '{}');
+	});
 
 	function updateShoppingCart(products: ShoppingCart) {
 		setShoppingCart(products);
