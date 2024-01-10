@@ -22,11 +22,11 @@ export const ProductPage = () => {
 				return navigate('/error');
 			}
 		}
-		if (productId) {
+		if (productId && !product) {
 			setIsLoading(true);
 			fetchProductData(productId);
 		}
-	}, [productId, navigate]);
+	}, [productId, navigate, product]);
 
 	return (
 		<>
