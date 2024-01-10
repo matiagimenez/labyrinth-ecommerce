@@ -6,17 +6,23 @@ import { useShoppingCart } from '../../../hooks';
 
 type WishListItemProps = {
 	product: Product;
+	index: number;
 	handleRemoveWishListItem: (id: string) => void;
 };
 
 export const WishListItem: FunctionComponent<WishListItemProps> = ({
 	product,
+	index,
 	handleRemoveWishListItem,
 }) => {
 	const { handleAddShoppingCartItem } = useShoppingCart();
 
 	return (
-		<article className='p-3 py-1 relative border border-cyan-500'>
+		<article
+			className={`p-3 py-1 relative ${
+				index !== 3 && 'border-b-2'
+			} border-cyan-500`}
+		>
 			<ProductDescription product={product} />
 			<div className='mr-4 py-2 items-center gap-1 flex justify-between'>
 				<button

@@ -27,11 +27,12 @@ export const WishList: FunctionComponent<WishListProps> = ({
 			<ProductList isOpen={isOpen}>
 				{Object.keys(wishList).length > 0 ? (
 					<section>
-						{Object.keys(wishList).map((key) => {
+						{Object.keys(wishList).map((key, index) => {
 							const { product } = wishList[key];
 							return (
 								<WishListItem
 									key={product.id}
+									index={index}
 									product={product}
 									handleRemoveWishListItem={
 										handleRemoveWishListItem
