@@ -21,7 +21,6 @@ export const useWishList = () => {
 		delete nextWishList[id];
 		updateWishList(nextWishList);
 		saveLocalStorage(localStorageKey, JSON.stringify(nextWishList));
-		toast.info('Item removed from the wishlist');
 	}
 
 	function handleAddWishListItem(product: Product) {
@@ -37,7 +36,6 @@ export const useWishList = () => {
 
 		updateWishList(nextWishList);
 		saveLocalStorage(localStorageKey, JSON.stringify(nextWishList));
-		toast.success('Item added to the wishlist');
 	}
 
 	return { wishList, handleRemoveWishListItem, handleAddWishListItem };
