@@ -24,7 +24,7 @@ export const ProductDescription: FunctionComponent<ProductDescriptionProps> = ({
 				<span className='inline-block mr-2'>{product.name}</span>
 				{amount && (
 					<span className='text-green-500 '>
-						${formatPrice(amount * product.price)}
+						{formatPrice(amount * product.price)}
 					</span>
 				)}
 			</p>

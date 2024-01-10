@@ -12,7 +12,7 @@ type CatalogItemProps = {
 export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 	product,
 }) => {
-	const { id, images, name, category, price, priceCurrency, stock } = product;
+	const { id, images, name, category, price, stock } = product;
 
 	const { handleAddShoppingCartItem } = useShoppingCart();
 
@@ -51,7 +51,7 @@ export const CatalogItem: FunctionComponent<CatalogItemProps> = ({
 
 			<footer className='p-4 pr-8 flex justify-between items-center'>
 				<span className='font-semibold text-green-500'>
-					{priceCurrency} {formatPrice(price)}
+					{formatPrice(price)}
 				</span>
 				<p className='relative group'>
 					<Button

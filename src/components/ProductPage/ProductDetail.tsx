@@ -40,7 +40,6 @@ export const ProductDetail: FunctionComponent<ProductDetailProps> = ({
 					{product?.title.replace(product.name, '')}
 				</p>
 				<p className='py-1 text-rustyred text-xl font-bold'>
-					{product?.priceCurrency}
 					{product?.price && formatPrice(product?.price)}
 				</p>
 				<p className='font-medium'>Stock available: {product?.stock}</p>
