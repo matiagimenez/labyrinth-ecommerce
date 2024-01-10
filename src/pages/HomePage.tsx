@@ -9,8 +9,11 @@ export const HomePage: FunctionComponent = () => {
 			<section className='overflow-hidden justify-center flex flex-col items-center lg:pt-4'>
 				<section className='text-center text-3xl order-2 mt-4 lg:order-1 md:text-4xl md:mt-8 2xl:text-5xl'>
 					<p className='px-4 font-semibold text-gray-800'>
-						The latest and greatest laptop now available for
-						purchase
+						The{' '}
+						<span className='inline-block font-bold text-rustyred'>
+							latest and greatest
+						</span>{' '}
+						laptops now available for purchase
 					</p>
 					<p className='pt-4 px-4 text-center'>
 						<span className='block font-semibold text-rustyred mt-2'>
