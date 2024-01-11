@@ -58,7 +58,7 @@ export const ShoppingCart: FunctionComponent<ShoppingCartProps> = ({
 				)}
 				{
 					<p className='text-center py-2 text-xl font-medium text-green-500'>
-						$ {formatPrice(total)}
+						{formatPrice(total)}
 					</p>
 				}
 			</ProductList>
