@@ -20,7 +20,6 @@ const products = [
 			'02-600x600.jpg',
 			'03-600x600.jpg',
 			'04-600x600.jpg',
-			'05-600x600.jpg',
 		],
 		banner: 'banner-alienware-m15-r7.jpg',
 		description:
@@ -133,7 +132,6 @@ const products = [
 			'02-600x600.webp',
 			'03-600x600.webp',
 			'04-600x600.webp',
-			'05-600x600.webp',
 		],
 		banner: 'banner-macbook.webp',
 		description:
@@ -243,8 +241,6 @@ const products = [
 			'02-600x600.jpg',
 			'03-600x600.jpg',
 			'04-600x600.jpg',
-			'05-600x600.jpg',
-			'06-600x600.jpg',
 		],
 		banner: 'banner-pulse-GL76.jpg',
 		description:
@@ -357,7 +353,6 @@ const products = [
 			'02-600x600.jpg',
 			'03-600x600.jpg',
 			'04-600x600.jpg',
-			'05-600x600.jpg',
 		],
 		banner: 'banner-idepad-gaming-3-ryzen.jpg',
 		description:
@@ -473,8 +468,6 @@ const products = [
 			'02-600x600.jpg',
 			'03-600x600.jpg',
 			'04-600x600.jpg',
-			'05-600x600.jpg',
-			'06-600x600.jpg',
 		],
 		banner: 'banner-vivobook.jpg',
 		description:
@@ -580,7 +573,7 @@ const products = [
 		price: 389890,
 		priceCurrency: '$',
 		enabled: true,
-		images: ['01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg'],
+		images: ['01.jpg', '02.jpg', '03.jpg', '04.jpg'],
 		banner: 'banner-zenbook-flip.jpg',
 		description:
 			'Unleash your creativity. The ASUS Zenbook series provides you with the tools to be more creative. Zenbook allows you to maximize your creative potential with a unique combination of performance, speed, elegance, and precision. A versatile and innovative 2-in-1 convertible with a 360-degree display that allows you to use it as a thin and light laptop, a convenient tablet, or in any intermediate position.',
@@ -693,7 +686,7 @@ const products = [
 		price: 279_890,
 		priceCurrency: '$',
 		enabled: true,
-		images: ['01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg'],
+		images: ['01.jpg', '02.jpg', '03.jpg', '04.jpg'],
 		banner: 'banner.webp',
 		description:
 			'The IdeaPad Flex 5 (14", AMD) features thin bezels on all four sides to provide a sleek and contemporary look, giving you more screen space to enjoy. With a 360° hinge, the IdeaPad Flex 5 transforms into a laptop, tablet, and more. Its long battery life ensures you can take your IdeaPad Flex 5 with you wherever and whenever you need it',
