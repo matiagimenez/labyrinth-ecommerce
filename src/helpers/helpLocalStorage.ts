@@ -11,7 +11,9 @@ export function readLocalStorage(key: string): string | null {
 
 export function saveLocalStorage(key: string, value: string): void {
 	try {
-		localStorage.setItem(key, value);
+		if (localStorage.getItem(key) !== value) {
+			localStorage.setItem(key, value);
+		}
 	} catch (exception) {
 		console.error(exception);
 	}

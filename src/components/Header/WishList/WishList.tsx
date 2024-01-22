@@ -14,6 +14,7 @@ export const WishList: FunctionComponent<WishListProps> = ({
 	toggleMenu,
 }) => {
 	const { wishList, handleRemoveWishListItem } = useWishList();
+
 	return (
 		<>
 			<Button

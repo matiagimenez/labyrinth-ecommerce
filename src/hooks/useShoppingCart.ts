@@ -1,9 +1,9 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { ShoppingCartContext } from '../context';
 import { ShoppingCart } from '../types';
 import { toast } from 'react-toastify';
 import { Product } from '../types/Product';
-import { saveLocalStorage } from '../helpers';
+import { readLocalStorage, saveLocalStorage } from '../helpers';
 
 type useShoppingCartReturnTypes = {
 	shoppingCart: ShoppingCart;
@@ -18,6 +18,27 @@ export const useShoppingCart = (): useShoppingCartReturnTypes => {
 		useContext(ShoppingCartContext);
 
 	const localStorageKey = 'shopping-cart';
+
+	useEffect(() => {
+		const broadcastChannel = new BroadcastChannel('shoppingCartUpdate');
+		broadcastChannel.postMessage('Shopping cart update');
+		return () => {
+			broadcastChannel.close();
+		};
+	}, [shoppingCart]);
+
+	useEffect(() => {
+		const broadcastChannel = new BroadcastChannel('shoppingCartUpdate');
+		broadcastChannel.onmessage = () => {
+			updateShoppingCart(
+				JSON.parse(readLocalStorage(localStorageKey) ?? '')
+			);
+		};
+
+		return () => {
+			broadcastChannel.close();
+		};
+	}, [updateShoppingCart]);
 
 	function handleRemoveShoppingCartItem(id: string) {
 		const nextShoppingCart = { ...shoppingCart };

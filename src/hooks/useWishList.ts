@@ -1,8 +1,8 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { WishListContext } from '../context';
 import { WishList, Product } from '../types';
 import { toast } from 'react-toastify';
-import { saveLocalStorage } from '../helpers';
+import { readLocalStorage, saveLocalStorage } from '../helpers';
 
 type useWishList = {
 	wishList: WishList;
@@ -13,6 +13,25 @@ type useWishList = {
 export const useWishList = () => {
 	const { wishList, updateWishList } = useContext(WishListContext);
 	const localStorageKey = 'wish-list';
+
+	useEffect(() => {
+		const broadcastChannel = new BroadcastChannel('wishListUpdate');
+		broadcastChannel.postMessage('Wishlist update');
+		return () => {
+			broadcastChannel.close();
+		};
+	}, [wishList]);
+
+	useEffect(() => {
+		const broadcastChannel = new BroadcastChannel('wishListUpdate');
+		broadcastChannel.onmessage = () => {
+			updateWishList(JSON.parse(readLocalStorage(localStorageKey) ?? ''));
+		};
+
+		return () => {
+			broadcastChannel.close();
+		};
+	}, [updateWishList]);
 
 	function handleRemoveWishListItem(id: string) {
 		if (!wishList[id]) return;
