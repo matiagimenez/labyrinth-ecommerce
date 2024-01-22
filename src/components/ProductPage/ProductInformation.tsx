@@ -9,8 +9,16 @@ type ProductInformationProps = {
 export const ProductInformation: FunctionComponent<ProductInformationProps> = ({
 	product,
 }) => {
+	const src = `/product-images/${product?.id}-${product?.banner}`;
 	return (
 		<section className='max-w-[1000px] ml-auto mr-auto'>
+			{product?.banner && (
+				<img
+					src={src}
+					alt={`${product.name} banner`}
+					className='hidden rounded-lg m-4 mb-0 w-full max-w-[95%] md:block xl:m-0 xl:max-w-full'
+				/>
+			)}
 			<h2 className='text-rustyred font-semibold px-4 pt-6 pb-1 lg:px-0 text-2xl'>
 				Product Information
 			</h2>
