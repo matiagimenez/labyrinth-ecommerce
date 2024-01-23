@@ -1,2 +1,2 @@
-export * from './ShoppingCartContext';
-export * from './WishListContext';
+export * from './ShoppingCartProvider';
+export * from './WishListProvider';
