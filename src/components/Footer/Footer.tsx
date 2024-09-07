@@ -10,7 +10,7 @@ export const Footer: FunctionComponent = () => {
 				Built with 🧉 & <span className='text-rustyred'>❤</span> by
 				<a
 					className='ml-1 text-rustyred font-semibold cursor-pointer hover:underline'
-					href='https://github.com/matiasgimenezdev'
+					href='https://github.com/matiagimenez'
 					target='_blank'
 				>
 					Matías Giménez
